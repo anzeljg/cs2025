@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IB DP Computer science interactive textbook, first examination 2027">
+  <meta name="author" content="Gregor Anželj and other authors / contributors">
+
+  <title>IB DP Computer science interactive textbook</title>
+
+  <script src="../js/color-modes.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/fontawesome.min.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="../logo/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../logo/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="mask-icon" href="../logo/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="../logo/favicon.ico">
+
+  <meta name="theme-color" content="#014a8c">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#TableOfContents">
+
+  <div class="skippy visually-hidden-focusable overflow-hidden">
+    <div class="container-xl">
+      <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+      <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to textbook navigation</a>
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="arrow-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+    </symbol>
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="chevron-expand" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="menu-button-wide-fill" viewBox="0 0 16 16">
+      <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="plus" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+    <symbol id="three-dots" viewBox="0 0 16 16">
+      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+    </symbol>
+  </svg>
+
+
+  <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      <div class="bd-navbar-toggle">
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle textbook navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          <span class="d-none fs-6 pe-1">Browse</span>
+        </button>
+      </div>
+
+      <a class="navbar-brand p-0 me-0 me-lg-2" href="../index.html" aria-label="Computer science">
+        <img src="../logo/ib-logo-light.png" height="24" class="me-2" /><title>Computer science</title>
+	    <span class="fs-4">Computer science</span>
+	  </a>
+
+      <div class="d-flex">
+        <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
+        </button>
+      </div>
+
+      <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+        <div class="offcanvas-header px-4 pb-0">
+          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Textbook actions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+        </div>
+
+        <div class="offcanvas-body p-4 pt-0 p-lg-0">
+          <hr class="d-lg-none text-white-50">
+
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="../etc/copyright.html" target="_blank" rel="noopener">
+                <i class="fa fa-copyright"></i>
+                <span class="d-lg-none ms-2">Copyright</span>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="../etc/colophon.html" target="_blank" rel="noopener">
+                <i class="fa fa-bookmark"></i>
+                <span class="d-lg-none ms-2">Colophon</span>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="../etc/sources.html" target="_blank" rel="noopener">
+                <i class="fa fa-paperclip"></i>
+                <span class="d-lg-none ms-2">Sources</span>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="mailto:gregor.anzelj@gmail.com" target="_blank" rel="noopener">
+                <i class="fa fa-comment-dots"></i>
+                <span class="d-lg-none ms-2">Comment</span>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/anzeljg/cs2027/releases/latest" target="_blank" rel="noopener">
+                <i class="fa fa-download"></i>
+                <span class="d-lg-none ms-2">Download</span>
+              </a>
+            </li>
+		  
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="../etc/search.html" rel="noopener">
+                <i class="fa fa-search"></i>
+                <span class="d-lg-none ms-2">Search</span>
+              </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+                    Light
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+                    Dark
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+                    Auto
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Textbook contents</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
+		  <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Computer fundamentals
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../a11/index.html" class="bd-links-link d-inline-block rounded active" aria-current="page">Computer hardware and operation</a></li>
+                <li><a href="../a12/index.html" class="bd-links-link d-inline-block rounded">Data representation and computer logic</a></li>
+                <li><a href="../a13/index.html" class="bd-links-link d-inline-block rounded">Operating systems and control systems</a></li>
+                <li><a href="../a14/index.html" class="bd-links-link d-inline-block rounded">Translations <span class="level-badge">HL</span></a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Networks
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../a21/index.html" class="bd-links-link d-inline-block rounded">Network fundamentals</a></li>
+                <li><a href="../a22/index.html" class="bd-links-link d-inline-block rounded">Network architecture</a></li>
+                <li><a href="../a23/index.html" class="bd-links-link d-inline-block rounded">Data transmissions</a></li>
+                <li><a href="../a24/index.html" class="bd-links-link d-inline-block rounded">Network security</a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Databases
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../a31/index.html" class="bd-links-link d-inline-block rounded">Database fundamentals</a></li>
+                <li><a href="../a32/index.html" class="bd-links-link d-inline-block rounded">Database design</a></li>
+                <li><a href="../a33/index.html" class="bd-links-link d-inline-block rounded">Database programming</a></li>
+                <li><a href="../a34/index.html" class="bd-links-link d-inline-block rounded">Alternative databases &amp; data warehouses <span class="level-badge">HL</span></a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Machine learning
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../a41/index.html" class="bd-links-link d-inline-block rounded">Machine learning fundamentals</a></li>
+                <li><a href="../a42/index.html" class="bd-links-link d-inline-block rounded">Data preprocessing <span class="level-badge">HL</span></a></li>
+                <li><a href="../a43/index.html" class="bd-links-link d-inline-block rounded">Machine learning approaches <span class="level-badge">HL</span></a></li>
+                <li><a href="../a44/index.html" class="bd-links-link d-inline-block rounded">Ethical considerations</a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-span-all mt-1 mb-3 me-2 border-top"></li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Computational thinking
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../b11/index.html" class="bd-links-link d-inline-block rounded">Approaches to cumputational thinking</a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Programming
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../b21/index.html" class="bd-links-link d-inline-block rounded">Programming fundamentals</a></li>
+                <li><a href="../b22/index.html" class="bd-links-link d-inline-block rounded">Data structures</a></li>
+                <li><a href="../b23/index.html" class="bd-links-link d-inline-block rounded">Programming constructs</a></li>
+                <li><a href="../b24/index.html" class="bd-links-link d-inline-block rounded">Programming algorithms</a></li>
+                <li><a href="../b25/index.html" class="bd-links-link d-inline-block rounded">File processing</a></li>
+              </ul>
+            </li>
+      
+	        <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Object-oriented programming
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../b31/index.html" class="bd-links-link d-inline-block rounded">Single class OOP fundamentals</a></li>
+                <li><a href="../b32/index.html" class="bd-links-link d-inline-block rounded">Multiple classes OOP fundamentals <span class="level-badge">HL</span></a></li>
+              </ul>
+            </li>
+
+            <li class="bd-links-group py-2">
+              <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+                Abstract data types <span class="level-badge">HL</span>
+              </strong>
+              <ul class="list-unstyled fw-normal pb-2 small">
+                <li><a href="../b41/index.html" class="bd-links-link d-inline-block rounded">ADT fundamentals <span class="level-badge">HL</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro pt-2 ps-lg-2">
+        <h1 class="bd-title mb-0" id="content"><span class="text-info">A1</span> Computer fundamentals</h1>
+        <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A1.1</span> Computer hardware and operation</h2>
+      </div>
+     
+      <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
+        <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+          In this unit
+          <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
+        </button>
+        <strong class="d-none d-md-block h6 my-2 ms-3">In this unit</strong>
+        <hr class="d-none d-md-block my-2 ms-2">
+        <div class="collapse bd-toc-collapse" id="tocContents">
+          <nav id="TableOfContents">
+            <ul>
+              <li><a href="page1.html">The main CPU components</a></li>
+              <li><a href="page2.html">The role of a GPU</a></li>
+              <li><a href="page3.html">Differences between the CPU and the GPU <span class="level-badge">HL</span></a></li>
+              <li><a href="page4.html">Different types of primary memory</a></li>
+              <li><a href="page5.html">The fetch, decode and execute cycle</a></li>
+              <li><a href="page6.html">The  pipelining in multi-core architectures <span class="level-badge">HL</span></a></li>
+              <li><a href="page7.html">Internal and external types of secondary memory</a></li>
+              <li><a href="page8.html">The concept of compression</a></li>
+              <li><a href="page9.html">Different types of services in cloud computing</a></li>
+              <hr class="d-none d-md-block my-2 ms-2">
+			  <li><a href="concepts.html">Key concepts</a></li>
+			  <li><a href="tasks.html">Revision tasks</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="bd-content ps-lg-2">
+<!-- Content start -->
+<div class="bd-callout bd-callout-info">
+<p><i class="fa fa-compass"></i> <strong>Guiding question</strong></p>
+<p>What principles underpin the operation of a computer, from low-level hardware functionality to operating system interactions?</p>
+</div>
+
+<p>
+<strong><span class="text-info">A1.1.1</span> Describe the functions and interactions of the main CPU components.</strong>
+<ul>
+<li>Units: arithmetic logic unit (ALU), control unit (CU)</li>
+<li>Registers: instruction register (IR), program counter (PC), memory address register (MAR), memory data register (MDR), accumulator (AC)</li>
+<li>Buses: address, data, control</li>
+<li>Processors: single core processor, multi-core processor, co-processors</li>
+<li>A diagrammatic representation of the relationship between the specified CPU components</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.2</span> Describe the role of a GPU.</strong>
+<ul>
+<li>The architecture that allows graphics processing units (GPUs) to handle specific tasks and makes them  suitable for complex computations</li>
+<li>Real-world scenarios may include video games, artificial intelligence (AI), large simulations and other applications that require graphics rendering and machine learning</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.3</span> Explain the differences between the CPU and the GPU.</strong> <span class="badge bg-info">HL</span>
+<ul>
+<li>Differences in their design philosophies, usage scenarios</li>
+<li>Differences in their core architecture, processing power, memory access, power efficiency</li>
+<li>CPUs and GPUs working together: task division, data sharing, coordinating execution</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.4</span> Explain the purposes of different types of primary memory.</strong>
+<ul>
+<li>Random-access memory (RAM), read only memory (ROM), cache (L1, L2, L3), registers</li>
+<li>The interaction of the CPU with different types of memory to optimize performance</li>
+<li>The relevance of the terms “cache miss” and “cache hit”</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.5</span> Describe the fetch, decode and execute cycle.</strong>
+<ul>
+<li>The basic operations a CPU performs to execute a single instruction in machine language</li>
+<li>The interaction between memory and registers via the three buses: address, data, control</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.6</span> Describe the process of pipelining in multi-core architectures.</strong> <span class="badge bg-info">HL</span>
+<ul>
+<li>The instructions fetch, decode, execute
+<li>Write-back stages to improve the overall system performance in multi-core architectures</li>
+<li>Overview of how cores in multi-core processors work independently and in parallel</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.7</span> Describe internal and external types of secondary memory storage.</strong>
+<ul>
+<li>Internal hard drives: solid state drive (SSD), hard disk drive (HDD), embedded multimedia cards (eMMCs)</li>
+<li>External hard drives: SSD, HDD, optical drives, flash drives, memory cards, network attached storage (NAS)</li>
+<li>The scenarios in which the various types of drive are used</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.8</span> Describe the concept of compression.</strong>
+<ul>
+<li>The differences between lossy compression methods and lossless compression methods</li>
+<li>Run-length encoding and transform coding</li>
+</ul>
+</p>
+
+<p>
+<strong><span class="text-info">A1.1.9</span> Describe the different types of services in cloud computing.</strong>
+<ul>
+<li>Services: software as a service (SaaS), platform as a service (PaaS), infrastructure as a service (IaaS)</li>
+<li>The differences between the approaches of SaaS, PaaS, and IaaS in various real-world scenarios, recognizing that different degrees of control and flexibility influence resource management and resource availability</li>
+</ul>
+</p>
+
+<div class="bd-callout bd-callout-info">
+<p><i class="fa fa-link"></i> <strong>Linking questions</strong></p>
+<p>
+<ul>
+<li>What role does multitasking in an operating system play in machine learning? <span class="badge bg-info">A4</span></li>
+<li>How might a conditional statement be constructed using Boolean logic gates in a circuit? <span class="badge bg-info">B2</span></li>
+<li>What role does task-scheduling in an operating system play in managing network traffic and requests? <span class="badge bg-info">A2.3.3</span> <span class="badge bg-info">A2.4</span></li>
+<li>How does resource allocation in an operating system impact network performance and stability? <span class="badge bg-info">A2</span></li>
+<li>What role do GPUs play in non-graphics computational tasks? <span class="badge bg-info">A4</span></li>
+<li>To what extent should computer systems not cause harm? <span class="badge bg-warning">TOK</span></li>
+</ul>
+</p>
+</div>
+<!-- Content end -->
+      </div>
+
+    </main>
+  </div>
+
+
+  <footer class="bd-footer py-3 py-md-3 mt-5 bg-body-tertiary">
+    <div class="container py-3 py-md-3 px-4 px-md-3 text-body-secondary">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="../index.html" aria-label="Computer science">
+            <img src="../logo/ib-logo-dark.png" height="24" class="me-2" />
+	        <span class="fs-5">Computer science</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">IB DP Computer science interactive textbook created, designed and editied by <a href="https://github.com/anzeljg">Gregor Anželj</a> with other <a href="../etc/colophon.html">authors and contributors</a>.</li>
+            <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, content <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3 offset-lg-1 mb-3">
+          <h5>About</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../etc/about.html">Nature of the subject</a></li>
+            <li class="mb-2"><a href="../etc/core.html">The DP core</a></li>
+            <li class="mb-2"><a href="../etc/global.html">International-mindedness</a></li>
+            <li class="mb-2"><a href="../etc/profile.html">IB learner profile</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3 mb-3">
+          <h5>Approaches</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../etc/learning.html">Approaches to learning</a></li>
+            <li class="mb-2"><a href="../etc/teaching.html">Approaches to teaching</a></li>
+            <li class="mb-2"><a href="../etc/objectives.html">Aims and objectives</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Assessment</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../etc/external.html">External assessment</a></li>
+            <li class="mb-2"><a href="../etc/internal.html">Internal assessment</a></li>
+            <li class="mb-2"><a href="../etc/terms.html">Command terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+<div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
+
+</body>
+</html>
