@@ -1610,6 +1610,16 @@ details[open] > .bd-summary-link {
 .bd-callout .highlight {
     background-color: rgba(0, 0, 0, 0.05);
 }
+.bd-callout-primary {
+    --bd-callout-color: var(--bs-primary-text-emphasis);
+    --bd-callout-bg: var(--bs-primary-bg-subtle);
+    --bd-callout-border: var(--bs-primary-border-subtle);
+}
+.bd-callout-secondary {
+    --bd-callout-color: var(--bs-secondary-text-emphasis);
+    --bd-callout-bg: var(--bs-secondary-bg-subtle);
+    --bd-callout-border: var(--bs-secondary-border-subtle);
+}
 .bd-callout-info {
     --bd-callout-color: var(--bs-info-text-emphasis);
     --bd-callout-bg: var(--bs-info-bg-subtle);
@@ -1624,6 +1634,16 @@ details[open] > .bd-summary-link {
     --bd-callout-color: var(--bs-danger-text-emphasis);
     --bd-callout-bg: var(--bs-danger-bg-subtle);
     --bd-callout-border: var(--bs-danger-border-subtle);
+}
+.bd-callout-success {
+    --bd-callout-color: var(--bs-success-text-emphasis);
+    --bd-callout-bg: var(--bs-success-bg-subtle);
+    --bd-callout-border: var(--bs-success-border-subtle);
+}
+.bd-callout-quote {
+    --bd-callout-color: var(--bd-callout-color, inherit);
+    --bd-callout-bg: transparent;
+    --bd-callout-border: var(--bs-info-border-subtle);
 }
 .bd-brand-logos {
     color: #712cf9;
@@ -2686,7 +2706,8 @@ main [tabindex="0"] {
     text-decoration: none;
     opacity: 1;
 }
-/*---------- anzeljg additions ----------*/
+/*========== anzeljg additions ==========*/
+/*----------   subject level   ----------*/
 .level-badge {
     float: right;
     font-size: 12px;
@@ -2701,4 +2722,217 @@ main [tabindex="0"] {
 [data-bs-theme="dark"] .level-badge {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
+}
+/*----------    flash cards    ----------*/
+.flashcard-wrapper {
+    /*width: 100%;*/
+    height: 160px;
+}
+.flashcard-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+	background-color: var(--bs-card-cap-bg);
+}
+.flashcard-front, .flashcard-back {
+    /*background-color: #ffffff;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.flashcard-front p, .flashcard-back p {
+    position: relative;
+    top: 50%;
+	width: 100%;
+    transform: translateY(-50%);
+    /*font-size: large;*/
+    margin: 0;
+}
+.flashcard-back {
+    transform: rotateX(180deg);
+}
+.flashcard-wrapper:hover .flashcard-body {
+    transform: rotateX(180deg);
+}
+
+/*---------- invert BW images in dark mode ----------*/
+[data-bs-theme="dark"] .color-invertible {
+	filter: invert(85%);
+}
+
+/*---------- dark/light mode tables ----------*/
+.bd-table-primary {
+    --bs-table-bg: var(--bs-primary-bg-subtle);
+}
+
+/*---------- overline over lowercase ----------*/
+u.over-1 {
+  text-underline-offset: -0.7em;
+  text-decoration-thickness: 1px;
+}
+
+u.over-2 {
+  text-underline-offset: -0.9em;
+  text-decoration-thickness: 1px;
+}
+
+u.over-3 {
+  text-underline-offset: -1.1em;
+  text-decoration-thickness: 1px;
+}
+
+u.over-4 {
+  text-underline-offset: -1.3em;
+  text-decoration-thickness: 1px;
+}
+
+/*---------- Interactive SQL ----------*/
+.datatable{
+	height: 20rem;
+	border-radius: 3px;
+	border:1px solid #ccc;
+	overflow-y:scroll;
+	margin-bottom:10px
+}
+
+/*---------- Ace editor ----------*/
+.ace-editor {
+  font-size: var(--bs-body-font-size);
+}
+.output {
+  min-height: 1rem;
+  font-size: var(--bs-body-font-size);
+  background-color: var(--bs-secondary-bg-subtle);
+}
+.ace-h-5 {
+  height: 5rem;
+  max-height: 5rem;
+}
+.ace-h-10 {
+  height: 10rem;
+  max-height: 10rem;
+}
+.ace-h-15 {
+  height: 15rem;
+  max-height: 15rem;
+}
+.ace-h-20 {
+  height: 20rem;
+  max-height: 20rem;
+}
+.ace-h-25 {
+  height: 25rem;
+  max-height: 25rem;
+}
+.ace-h-30 {
+  height: 30rem;
+  max-height: 30rem;
+}
+.ace-h-35 {
+  height: 35rem;
+  max-height: 35rem;
+}
+.ace-h-40 {
+  height: 40rem;
+  max-height: 40rem;
+}
+.ace-h-45 {
+  height: 45rem;
+  max-height: 45rem;
+}
+.ace-h-50 {
+  height: 50rem;
+  max-height: 50rem;
+}
+.ace-h-55 {
+  height: 55rem;
+  max-height: 55rem;
+}
+.ace-h-60 {
+  height: 60rem;
+  max-height: 60rem;
+}
+.ace-h-65 {
+  height: 65rem;
+  max-height: 65rem;
+}
+.ace-h-70 {
+  height: 70rem;
+  max-height: 70rem;
+}
+.ace-h-75 {
+  height: 75rem;
+  max-height: 75rem;
+}
+.ace-h-80 {
+  height: 80rem;
+  max-height: 80rem;
+}
+.ace-h-85 {
+  height: 85rem;
+  max-height: 85rem;
+}
+.ace-h-90 {
+  height: 90rem;
+  max-height: 90rem;
+}
+.ace-h-95 {
+  height: 95rem;
+  max-height: 95rem;
+}
+.ace-h-100 {
+  height: 100rem;
+  max-height: 100rem;
+}
+
+/*---------- Truth table styles ----------*/
+.truth-table td {
+  padding: 0 4px;
+  min-width: 2.4em;
+}
+
+.bb {
+  border-bottom: 1px solid var(--bs-body-color);
+}
+
+.bl {
+  border-left: 1px solid var(--bs-body-color);
+}
+
+.bll {
+  border-left: 3px double var(--bs-body-color);
+  /*width: 3.5em;*/
+}
+
+.index {
+  font-size: 0.7em;
+  color: #c0c0c0;
+}
+
+.venn {
+  padding: 10px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt {
+  grid-column-start: 1;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+dd {
+  grid-column-start: 2;
+}
+
+.al {
+  text-align: left;
 }

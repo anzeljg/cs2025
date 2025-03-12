@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="26.0.13">
+  <diagram name="Page-1" id="gLe2imH67EccNk9nW9_i">
+    <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="70" y="120" width="690" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-1" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.6983333587646484;arrowSize=0.18687496185302735;fillColor=#0DCAF0;strokeColor=#0DCAF0;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="50" width="640" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-2" value="Problem specification" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="90" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-3" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Real-world problem&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fillColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-4" value="&lt;font&gt;Decomposition&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="180" y="60" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-5" value="&lt;font&gt;Pattern recognition&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="280" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-6" value="&lt;font&gt;Abstraction&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="370" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-7" value="&lt;font&gt;Algorithmic thinking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="460" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n5GlDHE_83_Giw5TfJTs-8" value="&lt;font&gt;Testing and evaluation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#014A8C;fontColor=#014A8C;" vertex="1" parent="n5GlDHE_83_Giw5TfJTs-9">
+          <mxGeometry x="550" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

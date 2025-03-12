@@ -195,7 +195,7 @@
                 Computer fundamentals
               </strong>
               <ul class="list-unstyled fw-normal pb-2 small">
-                <li><a href="../a11/index.html" class="bd-links-link d-inline-block rounded active" aria-current="page">Computer hardware and operation</a></li>
+                <li><a href="../a11/index.html" class="bd-links-link d-inline-block rounded">Computer hardware and operation</a></li>
                 <li><a href="../a12/index.html" class="bd-links-link d-inline-block rounded">Data representation and computer logic</a></li>
                 <li><a href="../a13/index.html" class="bd-links-link d-inline-block rounded">Operating systems and control systems</a></li>
                 <li><a href="../a14/index.html" class="bd-links-link d-inline-block rounded">Translations <span class="level-badge">HL</span></a></li>
@@ -256,7 +256,7 @@
               <ul class="list-unstyled fw-normal pb-2 small">
                 <li><a href="../b21/index.html" class="bd-links-link d-inline-block rounded">Programming fundamentals</a></li>
                 <li><a href="../b22/index.html" class="bd-links-link d-inline-block rounded">Data structures</a></li>
-                <li><a href="../b23/index.html" class="bd-links-link d-inline-block rounded">Programming constructs</a></li>
+                <li><a href="../b23/index.html" class="bd-links-link d-inline-block rounded active" aria-current="page">Programming constructs</a></li>
                 <li><a href="../b24/index.html" class="bd-links-link d-inline-block rounded">Programming algorithms</a></li>
                 <li><a href="../b25/index.html" class="bd-links-link d-inline-block rounded">File processing</a></li>
               </ul>
@@ -288,8 +288,9 @@
 
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
-        <h1 class="bd-title mb-0" id="content"><span class="text-info">A1</span> Computer fundamentals</h1>
-        <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A1.1</span> Computer hardware and operation</h2>
+        <h1 class="bd-title mb-0" id="content">Selection structures</h1>
+        <h2 class="bd-subtitle mb-0" id="content"><span class="text-warning">B2.3</span> Programming constructs</h2>
+        <p class="bd-lead"><span class="text-warning">B2.3.2</span> Construct programs utilizing appropriate selection structures.</p>
       </div>
      
       <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
@@ -302,15 +303,10 @@
         <div class="collapse bd-toc-collapse" id="tocContents">
           <nav id="TableOfContents">
             <ul>
-              <li><a href="page1.html">CPU components</a></li>
-              <li><a href="page2.html">Role of a GPU</a></li>
-              <li><a href="page3.html">CPU versus GPU <span class="level-badge">HL</span></a></li>
-              <li><a href="page4.html">Primary memory</a></li>
-              <li><a href="page5.html">Instruction cycle</a></li>
-              <li><a href="page6.html">Pipelining in multi-core architectures <span class="level-badge">HL</span></a></li>
-              <li><a href="page7.html">Secondary memory</a></li>
-              <li><a href="page8.html">Compression</a></li>
-              <li><a href="page9.html">Services in cloud computing</a></li>
+              <li><a href="page1.html">Instruction order</a></li>
+              <li><a href="page2.html" class="active">Selection structures</a></li>
+              <li><a href="page3.html">Looping structures</a></li>
+              <li><a href="page4.html">Functions and modularization</a></li>
               <hr class="d-none d-md-block my-2 ms-2">
 			  <li><a href="concepts.html">Key concepts</a></li>
 			  <li><a href="tasks.html">Revision tasks</a></li>
@@ -321,103 +317,6 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
-<div class="bd-callout bd-callout-info">
-<p><i class="fa fa-compass"></i> <strong>Guiding question</strong></p>
-<p>What principles underpin the operation of a computer, from low-level hardware functionality to operating system interactions?</p>
-</div>
-
-<p>
-<strong><span class="text-info">A1.1.1</span> Describe the functions and interactions of the main CPU components.</strong>
-<ul>
-<li>Units: arithmetic logic unit (ALU), control unit (CU)</li>
-<li>Registers: instruction register (IR), program counter (PC), memory address register (MAR), memory data register (MDR), accumulator (AC)</li>
-<li>Buses: address, data, control</li>
-<li>Processors: single core processor, multi-core processor, co-processors</li>
-<li>A diagrammatic representation of the relationship between the specified CPU components</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.2</span> Describe the role of a GPU.</strong>
-<ul>
-<li>The architecture that allows graphics processing units (GPUs) to handle specific tasks and makes them  suitable for complex computations</li>
-<li>Real-world scenarios may include video games, artificial intelligence (AI), large simulations and other applications that require graphics rendering and machine learning</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.3</span> Explain the differences between the CPU and the GPU.</strong> <span class="badge bg-info">HL</span>
-<ul>
-<li>Differences in their design philosophies, usage scenarios</li>
-<li>Differences in their core architecture, processing power, memory access, power efficiency</li>
-<li>CPUs and GPUs working together: task division, data sharing, coordinating execution</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.4</span> Explain the purposes of different types of primary memory.</strong>
-<ul>
-<li>Random-access memory (RAM), read only memory (ROM), cache (L1, L2, L3), registers</li>
-<li>The interaction of the CPU with different types of memory to optimize performance</li>
-<li>The relevance of the terms »cache miss« and »cache hit«</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.5</span> Describe the fetch, decode and execute cycle.</strong>
-<ul>
-<li>The basic operations a CPU performs to execute a single instruction in machine language</li>
-<li>The interaction between memory and registers via the three buses: address, data, control</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.6</span> Describe the process of pipelining in multi-core architectures.</strong> <span class="badge bg-info">HL</span>
-<ul>
-<li>The instructions fetch, decode, execute
-<li>Write-back stages to improve the overall system performance in multi-core architectures</li>
-<li>Overview of how cores in multi-core processors work independently and in parallel</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.7</span> Describe internal and external types of secondary memory storage.</strong>
-<ul>
-<li>Internal hard drives: solid state drive (SSD), hard disk drive (HDD), embedded multimedia cards (eMMCs)</li>
-<li>External hard drives: SSD, HDD, optical drives, flash drives, memory cards, network attached storage (NAS)</li>
-<li>The scenarios in which the various types of drive are used</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.8</span> Describe the concept of compression.</strong>
-<ul>
-<li>The differences between lossy compression methods and lossless compression methods</li>
-<li>Run-length encoding and transform coding</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.9</span> Describe the different types of services in cloud computing.</strong>
-<ul>
-<li>Services: software as a service (SaaS), platform as a service (PaaS), infrastructure as a service (IaaS)</li>
-<li>The differences between the approaches of SaaS, PaaS, and IaaS in various real-world scenarios, recognizing that different degrees of control and flexibility influence resource management and resource availability</li>
-</ul>
-</p>
-
-<div class="bd-callout bd-callout-info">
-<p><i class="fa fa-link"></i> <strong>Linking questions</strong></p>
-<p>
-<ul>
-<li>What role does multitasking in an operating system play in machine learning? <span class="badge bg-info">A4</span></li>
-<li>How might a conditional statement be constructed using Boolean logic gates in a circuit? <span class="badge bg-warning">B2</span></li>
-<li>What role does task-scheduling in an operating system play in managing network traffic and requests? <span class="badge bg-info">A2.3.3</span> <span class="badge bg-info">A2.4</span></li>
-<li>How does resource allocation in an operating system impact network performance and stability? <span class="badge bg-info">A2</span></li>
-<li>What role do GPUs play in non-graphics computational tasks? <span class="badge bg-info">A4</span></li>
-<li>To what extent should computer systems not cause harm? <span class="badge bg-primary">TOK</span></li>
-</ul>
-</p>
-</div>
 <!-- Content end -->
       </div>
 

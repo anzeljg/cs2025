@@ -195,7 +195,7 @@
                 Computer fundamentals
               </strong>
               <ul class="list-unstyled fw-normal pb-2 small">
-                <li><a href="../a11/index.html" class="bd-links-link d-inline-block rounded active" aria-current="page">Computer hardware and operation</a></li>
+                <li><a href="../a11/index.html" class="bd-links-link d-inline-block rounded">Computer hardware and operation</a></li>
                 <li><a href="../a12/index.html" class="bd-links-link d-inline-block rounded">Data representation and computer logic</a></li>
                 <li><a href="../a13/index.html" class="bd-links-link d-inline-block rounded">Operating systems and control systems</a></li>
                 <li><a href="../a14/index.html" class="bd-links-link d-inline-block rounded">Translations <span class="level-badge">HL</span></a></li>
@@ -222,7 +222,7 @@
                 <li><a href="../a31/index.html" class="bd-links-link d-inline-block rounded">Database fundamentals</a></li>
                 <li><a href="../a32/index.html" class="bd-links-link d-inline-block rounded">Database design</a></li>
                 <li><a href="../a33/index.html" class="bd-links-link d-inline-block rounded">Database programming</a></li>
-                <li><a href="../a34/index.html" class="bd-links-link d-inline-block rounded">Alternative databases and data warehouses <span class="level-badge">HL</span></a></li>
+                <li><a href="../a34/index.html" class="bd-links-link d-inline-block rounded">Alternative databases &amp; data warehouses <span class="level-badge">HL</span></a></li>
               </ul>
             </li>
 
@@ -288,136 +288,140 @@
 
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
-        <h1 class="bd-title mb-0" id="content"><span class="text-info">A1</span> Computer fundamentals</h1>
-        <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A1.1</span> Computer hardware and operation</h2>
+        <h1 class="bd-title mb-0" id="content">Nature of the subject</h1>
       </div>
      
-      <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-        <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-          In this unit
-          <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
-        </button>
-        <strong class="d-none d-md-block h6 my-2 ms-3">In this unit</strong>
-        <hr class="d-none d-md-block my-2 ms-2">
-        <div class="collapse bd-toc-collapse" id="tocContents">
-          <nav id="TableOfContents">
-            <ul>
-              <li><a href="page1.html">CPU components</a></li>
-              <li><a href="page2.html">Role of a GPU</a></li>
-              <li><a href="page3.html">CPU versus GPU <span class="level-badge">HL</span></a></li>
-              <li><a href="page4.html">Primary memory</a></li>
-              <li><a href="page5.html">Instruction cycle</a></li>
-              <li><a href="page6.html">Pipelining in multi-core architectures <span class="level-badge">HL</span></a></li>
-              <li><a href="page7.html">Secondary memory</a></li>
-              <li><a href="page8.html">Compression</a></li>
-              <li><a href="page9.html">Services in cloud computing</a></li>
-              <hr class="d-none d-md-block my-2 ms-2">
-			  <li><a href="concepts.html">Key concepts</a></li>
-			  <li><a href="tasks.html">Revision tasks</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
-<div class="bd-callout bd-callout-info">
-<p><i class="fa fa-compass"></i> <strong>Guiding question</strong></p>
-<p>What principles underpin the operation of a computer, from low-level hardware functionality to operating system interactions?</p>
-</div>
+<h2 id="what-is-cs">What is computer science?</h2>
 
-<p>
-<strong><span class="text-info">A1.1.1</span> Describe the functions and interactions of the main CPU components.</strong>
-<ul>
-<li>Units: arithmetic logic unit (ALU), control unit (CU)</li>
-<li>Registers: instruction register (IR), program counter (PC), memory address register (MAR), memory data register (MDR), accumulator (AC)</li>
-<li>Buses: address, data, control</li>
-<li>Processors: single core processor, multi-core processor, co-processors</li>
-<li>A diagrammatic representation of the relationship between the specified CPU components</li>
+<figure class="bd-callout bd-callout-quote">
+  <blockquote class="blockquote">
+    <p align="justify">Computer science is no more about computers than astronomy is about telescopes.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Edsger W. Dijkstra, 1967
+  </figcaption>
+</figure>
+
+<p align="justify">Computer science is the study of computers and computational systems. It covers a range of topics related to the theoretical aspects of computing, including algorithms and software design, and the application of computer science to solve practical problems. Computer science is distinct from the natural sciences in that it does not rely on hypothesis and experimentation. Computer science can be considered to be crossdisciplinary, as it draws from a range of disciplines, especially mathematics.</p>
+
+
+<h2 id="cs-development">How did computer science develop?</h2>
+
+<p align="justify">The foundational concepts of computer science have evolved over centuries, shaped by the groundbreaking contributions of luminaries such as Al-Khwarizmi, Ada Lovelace, Alan Turing, John von Neumann, Grace Hopper and Tim Berners-Lee. The progress of computer science has been a journey from rudimentary mechanical devices to today’s advanced electronic machines and sophisticated software systems. Beginning with ancient tools like the abacus for basic arithmetic operations, computing transitioned through ground-breaking inventions such as Charles Babbage’s steam-powered Analytical Engine in the 19th century to Alan Turing’s theoretical universal computing machine. This in turn inspired John von Neumann and others on the Scientific Advisory Board of the United States government to produce the first working computer, ENIAC. These beginnings have led to a world where computing and computer science applications are essential elements of day-to-day life.
+</p>
+
+
+<h2 id="computational-thinking">What is computational thinking?</h2>
+
+<figure class="bd-callout bd-callout-quote">
+  <blockquote class="blockquote">
+    <p align="justify">Computational thinking is the thought processes involved in formulating a problem and expressing its solution(s) in such a way that a computer &ndash; human or machine &ndash; can effectively carry out.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Jeannette Wing, 2014
+  </figcaption>
+</figure>
+
+<p align="justify">In the DP computer science course, students develop computational thinking, a problem-solving technique that can be applied to everyday challenges. Computational thinking is a crucial skill set in the modern digital age, allowing us to tackle problems by leveraging the power of computer processes. As highlighted in the quote by Jeannette Wing, computational thinking does not necessarily involve programming. Rather, it focuses on understanding and solving problems in a manner that a computer could execute.</p>
+
+<p align="center"><img src="../img/computational-thinking-process.svg" class="img-responsive"></p>
+
+<p align="justify">The key components of computational thinking begin with a problem and then comprise the following.
+<ul align="justify">
+<li><b>Problem specification:</b> Clearly defining and understanding the nature of a problem, the limitations and its scope for establishing solution goals.<li><b>Decomposition:</b> Breaking down a complex problem or system into smaller, more manageable parts.</li>
+<li><b>Pattern recognition:</b> Identifying similarities to other problems, or identifying recurring elements in the system, to make predictions and develop algorithms.</li>
+<li><b>Abstraction:</b> Focusing on essential features and high-level ideas, whilst removing unnecessary detail, to develop a system overview.</li>
+<li><b>Algorithmic thinking:</b> Developing a step-by-step series of instructions for solving a particular problem.</li>
+<li><b>Testing and evaluation:</b> Assessing a potential solution against the initial expected goals to determine the effectiveness of the solution, or the adjustments needed to solve the problem completely.</li>
 </ul>
 </p>
 
-<p>
-<strong><span class="text-info">A1.1.2</span> Describe the role of a GPU.</strong>
-<ul>
-<li>The architecture that allows graphics processing units (GPUs) to handle specific tasks and makes them  suitable for complex computations</li>
-<li>Real-world scenarios may include video games, artificial intelligence (AI), large simulations and other applications that require graphics rendering and machine learning</li>
+
+<h2 id="cs-study-skills">Skills in the study of computer science</h2>
+
+<p align="justify">The goal of computer science is to solve meaningful problems &ndash; problems for which an obvious algorithm is not available. To solve problems, the practical skills of computer science need to be developed as part of the computational thinking process.</p>
+
+<p align="justify">The skills of computer science can be classified as both technical skills and personal skills. Technical skills are centred on algorithmic thinking and computer programming. Personal skills are focused on the ability to collaborate, think critically, think imaginatively and engage in the process of computational thinking. These personal skills are covered in more detail in the sections »Computer science and the IB learner profile« and »Approaches to learning and approaches to teaching in computer science«.</p>
+
+<h3 class="text-muted">Computational thinking and course content</h3>
+
+<p align="justify">The focus of the DP computer science course is computational thinking. Wherever possible, learning and teaching should take place with computational thinking in mind. This will develop students’ understanding of this concept and develop their ability to apply it. The focus on computational thinking also allows students to develop the skills needed for the IA task &ndash; the computational solution. Examples of units of work and individual lesson plans are given in the <i>Computer science teacher support material</i>.</p>
+
+<h3 class="text-muted">Practical skills in Computer science</h3>
+
+<p align="justify">Integral to the student experience of computer science is the learning that takes place through the practical application of computational thinking within the classroom or in an external context. Introducing a topic by raising problem scenarios that can be addressed using computational thinking develops in students a practical methodology with a focus on problem-solving. Progressive increasing complexity in these scenarios then promotes the development, improvement and consolidation of the practical skills of algorithmic thinking and computer programming.</p>
+
+<p align="justify">Students are encouraged to improve their practical skills of algorithmic thinking and programming through the conceptual and methodological perspectives of computational thinking. Students should also be encouraged to apply these skills where possible to problems in their personal, academic or social environment that they consider significant and challenging. Examples are »to do« lists, study calendars, personal budget tools, robotics projects, puzzles, computer games and mobile applications. This process of inquiry is central to the computer science course.</p>
+
+<h3 class="text-muted">Algorithmic thinking</h3>
+
+<p align="justify">An algorithm is a precise sequence of well-defined instructions designed to solve specific problems or perform tasks. Algorithms are vital in computer science and are a cornerstone of software development, underpinning data manipulation, search, sorting and optimizing. They allow computers to execute tasks accurately and efficiently.</p>
+
+<p align="justify">Algorithmic thinking &ndash; the process of developing algorithms &ndash; is a critical component of computational thinking. The algorithmic thinking process fosters the capacity to abstract problems and formulate algorithms, whether as code or in other forms of representation.</p>
+
+<p align="justify">The process of algorithmic thinking has four key steps.
+<ol align="justify">
+<li><b>Problem exploration and parameter variation:</b> Analyse the problem by working through examples with different parameters to uncover patterns and inform algorithm design.</li>
+<li><b>Detailed step-by-step documentation:</b> Record the steps taken for the different parameters to create a first draft of the algorithm.</li>
+<li><b>Pattern recognition and generalization:</b> Identify recurring patterns across different parameters to develop a set of steps applicable to a general parameter, converting the specific process in the first draft into a general algorithm.</li>
+<li><b>Testing and validation:</b> Finalize the algorithm by subjecting it to rigorous testing with a range of input parameters to ensure consistent and correct results. This is an iterative process, much like the scientific method, that never guarantees universal applicability. However, a good testing strategy will allow the algorithm to be refined and validated. This refinement will take into account the algorithm’s performance in terms of time (run time) and space (memory requirements). Different algorithms can solve the same problem, but there may be differences in terms of efficiency.</li>
+</ol>
+</p>
+
+<p align="justify">The set of steps described above assumes that algorithmic thinking always involves identifying a pattern, generalizing it to form an algorithm, and then testing the algorithm. This is quite similar to the scientific method of observation, hypothesis and experimentation. However, it is important to note that the validity of algorithms can also be judged by the logical sequence of their instructions and the validity of their mathematical calculations.</p>
+
+<p align="justify">In the process of developing these skills, students should be able to write technical documentation, including constructing different types of diagrams that illustrate the functional requirements and internal structures of the software solution.</p>
+
+<h3>Computer programming languages</h3>
+
+<p align="justify">The key application of algorithmic thinking to solve problems in computer science is computer programming. Students should be able to apply their skills of algorithmic thinking by developing a relevant computer program or software application. The skills of computer programming are a fundamental part of the computer science course and students will need to develop these skills in the relevant programming language: <b>Java</b> or <b>Python</b>. Course material is not specific to either programming language.</p>
+
+<p align="justify">Additionally, students will evaluate and design the data structures needed for a solution, such as variables with correct data types, static/dynamic data structures, classes, databases and I/O files. Students should be able to design efficient methods that will be used for manipulating the data within a software solution. To evaluate the effectiveness of a computer program, exception handling, debugging and testing techniques will also be an essential part of the computer programming skill set.</p>
+
+<p align="justify">Examination questions that include code will have two versions of the question, one in Java and one in Python. These questions will be comparable, assessing the same topics from the syllabus with the same contexts, and assessing the same assessment objectives (AO).</p>
+
+<p align="justify">The Python programming language has a number of built-in functions that can help with finding solutions to common computational challenges. The use of functions such as <code>sort</code>, <code>pop</code>, <code>len</code>, <code>max</code> and <code>min</code> can be very useful when programming algorithms and their use is encouraged in tasks such as the IA computational solution. However, in order to assess the full range of students’ abilities, certain questions in the examination will prohibit specific built-in functions. These instances will be clearly indicated in the examination papers.</p>
+
+
+<h2 id="cs-impact">What is the impact of computer science?</h2>
+
+<p align="justify">Computational thinking is a process that can be transferred to, and applied in, many different disciplines. These include mathematics and the natural sciences, but also disciplines outside the sciences where computation plays a role in deriving results. In computer science, the computational thinking process is used to solve problems by applying the skills of algorithmic thinking and computer programming.</p>
+
+<p align="justify">The problems that computer scientists solve often respond to challenges in the real world, so their solutions can have a profound impact on society, transforming many aspects of our daily lives, businesses, industries and government. These societal changes come with challenges, such as issues of privacy, digital addiction and the digital divide.</p>
+
+<p align="justify">As society continues to evolve with technology, it is crucial to address these concerns to ensure that the benefits of computer science are shared equitably and its potential pitfalls are mitigated. Computer scientists should be aware that when they abstract a problem to find a computational solution, this solution may well have far-reaching applications and consequences in the real world, significantly affecting the everyday lives of millions.</p>
+
+<p align="justify">As with all disciplines, there are ethical issues associated with computer science, particularly when it is applied to practical uses. Computer scientists need to consider that solutions and developments that may not initially seem to raise ethical questions could yet be applied in contexts that are ethically problematic.</p>
+
+<p align="justify">Ethics is addressed directly in the topic on machine learning (A4.4.1); meanwhile other topics address ethical issues through linking questions and TOK questions.</p>
+
+
+<h2 id="level-distinction">Distinction between SL and HL</h2>
+
+<p align="justify">Students at both SL and HL study the following parts of the course.
+<ul align="justify">
+<li>The nature of computer science, with computational thinking as an organizing concept</li>
+<li>An understanding of computer science through the practical use of a programming language (Java or Python), and the object-oriented programming (OOP) paradigm</li>
+<li>The application of Structured Query Language (SQL) to extract and manipulate data</li>
+<li>One IA task: The computational solution</li>
+<li>A case study focusing on emerging technologies</li>
+<li>The collaborative sciences project</li>
 </ul>
 </p>
 
-<p>
-<strong><span class="text-info">A1.1.3</span> Explain the differences between the CPU and the GPU.</strong> <span class="badge bg-info">HL</span>
-<ul>
-<li>Differences in their design philosophies, usage scenarios</li>
-<li>Differences in their core architecture, processing power, memory access, power efficiency</li>
-<li>CPUs and GPUs working together: task division, data sharing, coordinating execution</li>
+<p align="justify">The SL and HL courses both provide students with an understanding of computer science through the organizing concept of computational thinking and the practical use of skills in computer science to solve problems.</p>
+
+<p align="justify">The distinction between SL and HL is in both breadth and depth. The SL course has a recommended 150 teaching hours and the HL course has a recommended 240 hours.
+<ul align="justify">
+<li>SL students study seven topics on concepts and problem-solving in computer science, whereas HL students study an extra topic (abstract data types) with additional HL-only material within the seven SL topics.</li>
+<li>HL students study the topics to increased breadth, resulting in increased networked knowledge. HL requires the student to make more connections between diverse areas of the syllabus, thereby also increasing the depth of coverage.</li>
+<li>HL students also conduct deeper research in the case study, reflected in the extra two challenge questions in the case study for HL, additional recommended teaching hours, and additional time for paper 1.</li>
 </ul>
 </p>
 
-<p>
-<strong><span class="text-info">A1.1.4</span> Explain the purposes of different types of primary memory.</strong>
-<ul>
-<li>Random-access memory (RAM), read only memory (ROM), cache (L1, L2, L3), registers</li>
-<li>The interaction of the CPU with different types of memory to optimize performance</li>
-<li>The relevance of the terms »cache miss« and »cache hit«</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.5</span> Describe the fetch, decode and execute cycle.</strong>
-<ul>
-<li>The basic operations a CPU performs to execute a single instruction in machine language</li>
-<li>The interaction between memory and registers via the three buses: address, data, control</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.6</span> Describe the process of pipelining in multi-core architectures.</strong> <span class="badge bg-info">HL</span>
-<ul>
-<li>The instructions fetch, decode, execute
-<li>Write-back stages to improve the overall system performance in multi-core architectures</li>
-<li>Overview of how cores in multi-core processors work independently and in parallel</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.7</span> Describe internal and external types of secondary memory storage.</strong>
-<ul>
-<li>Internal hard drives: solid state drive (SSD), hard disk drive (HDD), embedded multimedia cards (eMMCs)</li>
-<li>External hard drives: SSD, HDD, optical drives, flash drives, memory cards, network attached storage (NAS)</li>
-<li>The scenarios in which the various types of drive are used</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.8</span> Describe the concept of compression.</strong>
-<ul>
-<li>The differences between lossy compression methods and lossless compression methods</li>
-<li>Run-length encoding and transform coding</li>
-</ul>
-</p>
-
-<p>
-<strong><span class="text-info">A1.1.9</span> Describe the different types of services in cloud computing.</strong>
-<ul>
-<li>Services: software as a service (SaaS), platform as a service (PaaS), infrastructure as a service (IaaS)</li>
-<li>The differences between the approaches of SaaS, PaaS, and IaaS in various real-world scenarios, recognizing that different degrees of control and flexibility influence resource management and resource availability</li>
-</ul>
-</p>
-
-<div class="bd-callout bd-callout-info">
-<p><i class="fa fa-link"></i> <strong>Linking questions</strong></p>
-<p>
-<ul>
-<li>What role does multitasking in an operating system play in machine learning? <span class="badge bg-info">A4</span></li>
-<li>How might a conditional statement be constructed using Boolean logic gates in a circuit? <span class="badge bg-warning">B2</span></li>
-<li>What role does task-scheduling in an operating system play in managing network traffic and requests? <span class="badge bg-info">A2.3.3</span> <span class="badge bg-info">A2.4</span></li>
-<li>How does resource allocation in an operating system impact network performance and stability? <span class="badge bg-info">A2</span></li>
-<li>What role do GPUs play in non-graphics computational tasks? <span class="badge bg-info">A4</span></li>
-<li>To what extent should computer systems not cause harm? <span class="badge bg-primary">TOK</span></li>
-</ul>
-</p>
-</div>
+<p align="justify">The HL course provides a solid foundation for the study of computer science or related subjects at university level.</p>
 <!-- Content end -->
       </div>
 
