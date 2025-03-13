@@ -1,0 +1,204 @@
+/*
+ * Dark and light themes for Ace (Cloud9 IDE) editor are based on and
+ * derived from original Ace editor themes. The following themes were
+ * use and updated/adapted:
+ *
+ * - Light theme: slightly modified "Crimson editor" theme
+ * - Dark theme:  slightly modified "Gruvbox" theme
+ *
+ */
+
+/* ------------- Light theme based on Crimson editor ------------- */
+
+[data-bs-theme="light"] .ace_editor {
+  color: #333333;
+  font-size: 1rem;
+  background-color: var(--bs-body-bg);
+}
+
+[data-bs-theme="light"] .ace_gutter {
+  color: #333333 !important;
+  background: var(--bs-secondary-bg-subtle) !important;
+}
+
+[data-bs-theme="light"] .ace_cursor {
+  color: var(--bs-dark) !important;
+}
+
+[data-bs-theme="light"] .ace_fold {
+  background-color: var(--bs-primary);
+}
+
+[data-bs-theme="light"] .ace_marker-layer .ace_selection {
+  background: rgba(var(--bd-blue-rgb), 0.1) !important;
+}
+
+[data-bs-theme="light"] .ace_keyword {
+  color: #4040F4 !important;
+}
+
+[data-bs-theme="light"] .ace_comment {
+  font-style: italic;
+  color: #4C886B !important;
+}
+
+[data-bs-theme="light"] .ace_variable {
+  color: #004080 !important;
+}
+
+[data-bs-theme="light"] .ace_variable.ace_language {
+  color: #004080 !important;
+}
+
+[data-bs-theme="light"] .ace_constant {
+  color: #FF9C00 !important;
+}
+
+[data-bs-theme="light"] .ace_constant.ace_language {
+  color: #FF9C00 !important;
+}
+
+[data-bs-theme="light"] .ace_constant.ace_numeric {
+  color: #FF9C00 !important;
+}
+
+[data-bs-theme="light"] .ace_string {
+  color: #C000C0 !important;
+}
+
+[data-bs-theme="light"] .ace_keyword.ace_operator {
+  color: #333333 !important;
+}
+
+[data-bs-theme="light"] .ace_punctuation.ace_operator {
+  color: #333333 !important;
+}
+
+[data-bs-theme="light"] .ace_marker-layer .ace_active-line,
+[data-bs-theme="light"] .ace_gutter-active-line {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-bs-theme="light"] .ace_marker-layer .ace_selected-word {
+  border-radius: 4px;
+  border: 8px solid rgba(var(--bd-blue-rgb), 0.1) !important;
+}
+
+[data-bs-theme="light"] .ace_print-margin {
+  width: 1px;
+  background: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="light"] .ace_entity.ace_name.ace_function {
+  color: #80C000 !important;
+}
+
+[data-bs-theme="light"] .ace_function.ace_support {
+  color: #C00000 !important;
+}
+
+[data-bs-theme="light"] .ace_indent-guide {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNQUFD4z6Crq/sfAAuYAuYl+7lfAAAAAElFTkSuQmCC") right repeat-y;
+}
+
+[data-bs-theme="light"] .ace_indent-guide-active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQIW2PQ1dX9zzBz5sz/ABCcBFFentLlAAAAAElFTkSuQmCC") right repeat-y;
+}
+
+
+/* ----------------- Dark theme based on Gruvbox ----------------- */
+
+[data-bs-theme="dark"] .ace_editor {
+  color: #FFFFFF;
+  font-size: 1rem;
+  background-color: var(--bs-body-bg);
+}
+
+[data-bs-theme="dark"] .ace_gutter {
+  color: #FFFFFF !important;
+  background: var(--bs-dark-bg-subtle) !important;
+}
+
+[data-bs-theme="dark"] .ace_cursor {
+  color: var(--bs-light) !important;
+}
+
+[data-bs-theme="dark"] .ace_fold {
+  background-color: var(--bs-primary);
+}
+
+[data-bs-theme="dark"] .ace_marker-layer .ace_selection {
+  background: rgba(var(--bd-blue-rgb), 0.5) !important;
+}
+
+[data-bs-theme="dark"] .ace_keyword {
+  color: #80C000 !important;
+}
+
+[data-bs-theme="dark"] .ace_comment {
+  font-style: italic;
+  color: #928375 !important;
+}
+
+[data-bs-theme="dark"] .ace_variable {
+  color: #00A8C6 !important;
+}
+
+[data-bs-theme="dark"] .ace_variable.ace_language {
+  color: #00A8C6 !important;
+}
+
+[data-bs-theme="dark"] .ace_constant {
+  color: #C2859A !important;
+}
+
+[data-bs-theme="dark"] .ace_constant.ace_language {
+  color: #C2859A !important;
+}
+
+[data-bs-theme="dark"] .ace_constant.ace_numeric {
+  color: #C2859A !important;
+}
+
+[data-bs-theme="dark"] .ace_string {
+  color: #B8BA37 !important;
+}
+
+[data-bs-theme="dark"] .ace_keyword.ace_operator {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .ace_punctuation.ace_operator {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .ace_marker-layer .ace_active-line,
+[data-bs-theme="dark"] .ace_gutter-active-line {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-bs-theme="dark"] .ace_marker-layer .ace_selected-word {
+  border-radius: 4px;
+  border: 8px solid rgba(var(--bd-blue-rgb), 0.5) !important;
+}
+
+[data-bs-theme="dark"] .ace_print-margin {
+  width: 1px;
+  background: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .ace_entity.ace_name.ace_function {
+  color: #F04080 !important;
+}
+
+[data-bs-theme="dark"] .ace_function.ace_support {
+  color: #EBDAB4 !important;
+}
+
+[data-bs-theme="dark"] .ace_indent-guide {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNQUFD4z6Crq/sfAAuYAuYl+7lfAAAAAElFTkSuQmCC") right repeat-y;
+}
+
+[data-bs-theme="dark"] .ace_indent-guide-active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQIW2PQ1dX9zzBz5sz/ABCcBFFentLlAAAAAElFTkSuQmCC") right repeat-y;
+}
