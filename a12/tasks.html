@@ -287,6 +287,101 @@
     </aside>
 
 
+	<!-- Modal: True 1 -->
+	<div class="modal fade" id="true1" tabindex="-1" aria-labelledby="true1label" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="true1label">Answer</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body bg-success-subtle">
+			<p class="text-success">The answer is correct.</p>
+			<p align="justify" class="text-success">Actually, 3 bits is enough as it gives 8 values, but amounts that fit evenly into 8-bit bytes are easier to work with.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal: True 2 -->
+	<div class="modal fade" id="true2" tabindex="-1" aria-labelledby="true2label" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="true2label">Answer</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body bg-success-subtle">
+			<p class="text-success">The answer is correct.</p>
+			<p align="justify" class="text-success">32 bits is slightly too small, so you will need 64 bits.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal: True 3 -->
+	<div class="modal fade" id="true3" tabindex="-1" aria-labelledby="true3label" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="true3label">Answer</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body bg-success-subtle">
+			<p class="text-success">The answer is correct.</p>
+			<p align="justify" class="text-success">This is a challenging question, but one a database designer would have to think about. There's about 94,000&nbsp;km of roads in New Zealand, so if the average length of a road was 1&nbsp;km, there would be too many roads for 16 bits. Either way, 32 bits would be a safe bet.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal: True 4 -->
+	<div class="modal fade" id="true4" tabindex="-1" aria-labelledby="true4label" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="true4label">Answer</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body bg-success-subtle">
+			<p class="text-success">The answer is correct.</p>
+			<p align="justify" class="text-success">Even 64 bits is not enough, but 128 bits is plenty! Remember that 128 bits isn't twice the range of 64 bits.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal: False -->
+	<div class="modal fade" id="false" tabindex="-1" aria-labelledby="false0label" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="false0label">Answer</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body bg-danger-subtle">
+			<p class="text-danger">The answer is wrong.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <h1 class="bd-title mb-0" id="content">Revision tasks</h1>
@@ -318,6 +413,126 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
+<div class="alert alert-primary" role="alert">
+<p>
+  <span class="badge text-bg-primary">1</span>
+</p>
+<p align="justify">Storing the day of the week.</p>
+<p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task01" id="task01_1" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task01_1">1 bit</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task01" id="task01_2" data-bs-toggle="modal" data-bs-target="#true1" />
+  <label class="form-check-label" id="task01_2">4 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task01" id="task01_3" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task01_3">8 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task01" id="task01_4" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task01_4">32 bits</label>
+</div>
+</p>
+</div>
+
+<div class="alert alert-primary" role="alert">
+<p>
+  <span class="badge text-bg-primary">2</span>
+</p>
+<p align="justify">Storing the number of all people in the world.</p>
+<p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task02" id="task02_1" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task02_1">16 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task02" id="task02_2" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task02_2">32 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task02" id="task02_3" data-bs-toggle="modal" data-bs-target="#true2" />
+  <label class="form-check-label" id="task02_3">64 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task02" id="task02_4" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task02_4">128 bits</label>
+</div>
+</p>
+</div>
+
+<div class="alert alert-primary" role="alert">
+<p>
+  <span class="badge text-bg-primary">3</span>
+</p>
+<p align="justify">Storing the number of roads in New Zealand.</p>
+<p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task03" id="task03_1" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task03_1">16 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task03" id="task03_2" data-bs-toggle="modal" data-bs-target="#true3" />
+  <label class="form-check-label" id="task03_2">32 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task03" id="task03_3" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task03_3">64 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task03" id="task03_4" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task03_4">128 bits</label>
+</div>
+</p>
+</div>
+
+<div class="alert alert-primary" role="alert">
+<p>
+  <span class="badge text-bg-primary">4</span>
+</p>
+<p align="justify">Storing the number of stars in the universe.</p>
+<p>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task04" id="task04_1" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task04_1">16 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task04" id="task04_2" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task04_2">32 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task04" id="task04_3" data-bs-toggle="modal" data-bs-target="#false" />
+  <label class="form-check-label" id="task04_3">64 bits</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" name="task04" id="task04_4" data-bs-toggle="modal" data-bs-target="#true4" />
+  <label class="form-check-label" id="task04_4">128 bits</label>
+</div>
+</p>
+</div>
+
+<div class="alert alert-primary" role="alert">
+<p>
+  <span class="badge text-bg-primary">5</span>
+  <span class="fa fa-star float-end"></span>
+</p>
+<p align="justify">Answer to the questions of the quiz or create a new quiz.</p>
+<p align="justify"><b>Note:</b> Leading zeros and spaces do not affect the correctness of the answers, for example:
+<ul align="justify">
+  <li>In the binary system 0101 and 101 represent the same number.</li>
+  <li>In the binary system 0010 0011, 0100011 and 100 011 represent the same number.</li>
+</ul>
+
+<div id="theQuizQuestions"></div>
+<p>
+  <form id="theForm" action="">
+    <button class="btn btn-primary" onClick="buildQuiz(5)"><i class="fa fa-plus-circle"></i> New quiz</button>
+  </form>
+</p>
+</div>
+
 <!-- Content end -->
       </div>
 

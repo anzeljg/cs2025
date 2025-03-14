@@ -19,6 +19,15 @@
   <!-- Color Mixers CMYK and RGB -->
   <link href="css/color-mixer.css" rel="stylesheet">
 
+  <!-- JSXGraph - Dynamic Mathematics with JavaScript -->
+  <link href="../css/jsxgraph/jsxgraph.css" rel="stylesheet">
+
+  <!-- Sound Sampler -->
+  <link href="css/sound-sampler.css" rel="stylesheet">
+
+  <!-- AudioSynth CSS -->
+  <link href="css/audiosynth.css" rel="stylesheet">
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="../logo/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -293,11 +302,66 @@
     </aside>
 
 
+	<!-- Modal: Answer 1 -->
+	<div class="modal fade" id="answer01" tabindex="-1" aria-labelledby="answer01label" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="answer01label">Answers</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			<p align="justify">These are the answers.
+            <ul align="justify">
+			  <li>»science« = 01110011 01100011 01101001 01100101 01101110 01100011 01100101</li>
+			  <li>»Wellington« = 01010111 01100101 01101100 01101100 01101001 01101110 01100111 01110100 01101111 01101110</li>
+			  <li>»358« = 00110011 00110101 00111000</li>
+			  <li>»Hello, how are you?« = 1001000 1100101 1101100 1101100 1101111 0101100 0100000 1101000 1101111 1110111 0100000 1100001 1110010 1100101 0100000 1111001 1101111 1110101 0111111</li>
+			</ul>
+			</p>
+			<p align="justify">Note that the text »358« is treated as 3 characters in ASCII, which may be confusing, as the text »358« is different to the number 358! You may have encountered this distinction in a spreadsheet e.g. if a cell starts with an inverted comma in Excel, it is treated as text rather than a number. One place this comes up is with phone numbers; if you type 027555555 into a spreadsheet as a number, it will come up as 27555555, but as text the 0 can be displayed. In fact, phone numbers aren't really just numbers because a leading zero can be important, as they can contain other characters – for example, +64 3 555 1234 extn. 1234.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal: Answer 2 -->
+	<div class="modal fade" id="answer02" tabindex="-1" aria-labelledby="answer02label" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="answer02label">Answers</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			<p align="justify">These are the answers.
+            <ul align="justify">
+			  <li>The largest number that can be represented using 32 bits is 4,294,967,295 (around 4.3 billion). You might have seen this number before &ndash; it is the largest unsigned integer that a 32 bit computer can easily represent in programming languages such as C.</li>
+			  <li>The decimal number for the largest character is 1,114,111.</li>
+			  <li>You can represent all current characters with 17 bits. The largest number you can represent with 16 bits is 65,536, which is not enough. If we go up to 17 bits, that gives 131,072, which is larger than 120,000. Therefore, we need 17 bits.</li>
+			</ul>
+			</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <h1 class="bd-title mb-0" id="content">Use of binary to store data</h1>
         <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A1.2</span> Data representation and computer logic</h2>
         <p class="bd-lead"><span class="text-info">A1.2.2</span> Explain how binary is used to store data.</p>
+		
+		<p align="center"><img src="img/media-447575-2566123-4874318_1920.jpg" class="img-fluid" /></p>
+		
+		<p align="justify">There are several different ways in which computers use bits to store text, that is individual characters and strings, photos or images, sounds, music and video. In this section, we will look at some common ones and then look at the pros and cons of each representation.</p>
       </div>
      
       <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
@@ -325,6 +389,1364 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
+<hr />
+<p class="text-center display-4">Text</p>
+<hr />
+
+
+<h2>ASCII</h2>
+
+<p align="justify">Count how many different characters that you could type into a text editor using your keyboard. (Don’t forget to count both of the symbols that share the number keys, and the symbols to the side that are for punctuation!)</p>
+
+<p>
+<div class="accordion" id="accordion01">
+  <div class="accordion-item bg-info-subtle text-info-emphasis">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-info-emphasis collapsed" style="background-color:var(--bs-info-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01" aria-expanded="true" aria-controls="collapse01">
+        <i class="fa fa-info-circle"></i> &nbsp;<strong>Characters</strong>
+      </button>
+    </h2>
+    <div id="collapse01" class="accordion-collapse collapse" data-bs-parent="#accordion01">
+      <div class="accordion-body">
+        <p align="justify">The collective name for upper case letters, lower case letters, numbers, and symbols is characters e.g. a, D, 1, h, 6, *, ], and ~ are all characters. Importantly, a space is also a character.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p align="justify">If you counted correctly, you should find that there were more than 64 characters, and you might have found up to around 95. Because 6 bits can only represent 64 characters, we will need more than 6 bits; it turns out that we need at least 7 bits to represent all of these characters as this gives 128 possible patterns. This is exactly what the ASCII representation for text does.</p>
+
+<p>
+<div class="accordion" id="accordion02">
+  <div class="accordion-item bg-danger-subtle text-danger">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-danger-emphasis collapsed" style="background-color:var(--bs-danger-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse02" aria-expanded="true" aria-controls="collapse02">
+        <i class="fa fa-trophy"></i> &nbsp;<strong>Why at least 7 bits?</strong>
+      </button>
+    </h2>
+    <div id="collapse02" class="accordion-collapse collapse" data-bs-parent="#accordion02">
+      <div class="accordion-body">
+        <p align="justify">In the previous section, we explained what happens when the number of dots was increased by 1. Can you explain how we knew that if 6 bits is enough to represent 64 characters, then 7 bits must be enough to represent 128 characters?</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p align="justify">Each pattern in ASCII is usually stored in 8 bits, with one wasted bit, rather than 7 bits. However, the left-most bit in each 8-bit pattern is a 0, meaning there are still only 128 possible patterns. Where possible, we prefer to deal with full bytes (8 bits) on a computer, this is why ASCII has an extra wasted bit.</p>
+
+<p align="justify">Here is a table that shows the patterns of bits that ASCII uses for each of the characters.</p>
+
+<p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Binary</th>
+<th>Char</th>
+<th>Binary</th>
+<th>Char &nbsp; &nbsp;</th>
+<th>Binary</th>
+<th>Char</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0100000 &nbsp; &nbsp;</td>
+<td>Space &nbsp; &nbsp;</td>
+<td>1000000 &nbsp; &nbsp;</td>
+<td>@</td>
+<td>1100000 &nbsp; &nbsp;</td>
+<td>`</td>
+</tr>
+<tr>
+<td>0100001</td>
+<td>!</td>
+<td>1000001</td>
+<td>A</td>
+<td>1100001</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0100010</td>
+<td>"</td>
+<td>1000010</td>
+<td>B</td>
+<td>1100010</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0100011</td>
+<td>#</td>
+<td>1000011</td>
+<td>C</td>
+<td>1100011</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0100100</td>
+<td>$</td>
+<td>1000100</td>
+<td>D</td>
+<td>1100100</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0100101</td>
+<td>%</td>
+<td>1000101</td>
+<td>E</td>
+<td>1100101</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0100110</td>
+<td>&amp;</td>
+<td>1000110</td>
+<td>F</td>
+<td>1100110</td>
+<td>f</td>
+</tr>
+<tr>
+<td>0100111</td>
+<td>'</td>
+<td>1000111</td>
+<td>G</td>
+<td>1100111</td>
+<td>g</td>
+</tr>
+<tr>
+<td>0101000</td>
+<td>(</td>
+<td>1001000</td>
+<td>H</td>
+<td>1101000</td>
+<td>h</td>
+</tr>
+<tr>
+<td>0101001</td>
+<td>)</td>
+<td>1001001</td>
+<td>I</td>
+<td>1101001</td>
+<td>i</td>
+</tr>
+<tr>
+<td>0101010</td>
+<td>*</td>
+<td>1001010</td>
+<td>J</td>
+<td>1101010</td>
+<td>j</td>
+</tr>
+<tr>
+<td>0101011</td>
+<td>+</td>
+<td>1001011</td>
+<td>K</td>
+<td>1101011</td>
+<td>k</td>
+</tr>
+<tr>
+<td>0101100</td>
+<td>,</td>
+<td>1001100</td>
+<td>L</td>
+<td>1101100</td>
+<td>l</td>
+</tr>
+<tr>
+<td>0101101</td>
+<td>-</td>
+<td>1001101</td>
+<td>M</td>
+<td>1101101</td>
+<td>m</td>
+</tr>
+<tr>
+<td>0101110</td>
+<td>.</td>
+<td>1001110</td>
+<td>N</td>
+<td>1101110</td>
+<td>n</td>
+</tr>
+<tr>
+<td>0101111</td>
+<td>/</td>
+<td>1001111</td>
+<td>O</td>
+<td>1101111</td>
+<td>o</td>
+</tr>
+<tr>
+<td>0110000</td>
+<td>0</td>
+<td>1010000</td>
+<td>P</td>
+<td>1110000</td>
+<td>p</td>
+</tr>
+<tr>
+<td>0110001</td>
+<td>1</td>
+<td>1010001</td>
+<td>Q</td>
+<td>1110001</td>
+<td>q</td>
+</tr>
+<tr>
+<td>0110010</td>
+<td>2</td>
+<td>1010010</td>
+<td>R</td>
+<td>1110010</td>
+<td>r</td>
+</tr>
+<tr>
+<td>0110011</td>
+<td>3</td>
+<td>1010011</td>
+<td>S</td>
+<td>1110011</td>
+<td>s</td>
+</tr>
+<tr>
+<td>0110100</td>
+<td>4</td>
+<td>1010100</td>
+<td>T</td>
+<td>1110100</td>
+<td>t</td>
+</tr>
+<tr>
+<td>0110101</td>
+<td>5</td>
+<td>1010101</td>
+<td>U</td>
+<td>1110101</td>
+<td>u</td>
+</tr>
+<tr>
+<td>0110110</td>
+<td>6</td>
+<td>1010110</td>
+<td>V</td>
+<td>1110110</td>
+<td>v</td>
+</tr>
+<tr>
+<td>0110111</td>
+<td>7</td>
+<td>1010111</td>
+<td>W</td>
+<td>1110111</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0111000</td>
+<td>8</td>
+<td>1011000</td>
+<td>X</td>
+<td>1111000</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0111001</td>
+<td>9</td>
+<td>1011001</td>
+<td>Y</td>
+<td>1111001</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0111010</td>
+<td>:</td>
+<td>1011010</td>
+<td>Z</td>
+<td>1111010</td>
+<td>z</td>
+</tr>
+<tr>
+<td>0111011</td>
+<td>;</td>
+<td>1011011</td>
+<td>[</td>
+<td>1111011</td>
+<td>{</td>
+</tr>
+<tr>
+<td>0111100</td>
+<td>&lt;</td>
+<td>1011100</td>
+<td>\</td>
+<td>1111100</td>
+<td>|</td>
+</tr>
+<tr>
+<td>0111101</td>
+<td>=</td>
+<td>1011101</td>
+<td>]</td>
+<td>1111101</td>
+<td>}</td>
+</tr>
+<tr>
+<td>0111110</td>
+<td>&gt;</td>
+<td>1011110</td>
+<td>^</td>
+<td>1111110</td>
+<td>~</td>
+</tr>
+<tr>
+<td>0111111</td>
+<td>?</td>
+<td>1011111</td>
+<td>_</td>
+<td>1111111</td>
+<td>Delete</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<p align="justify">For example, the letter »c« (lower case) in the table has the pattern »01100011« (the 0 at the front is just extra padding to make it up to 8 bits). The letter »o« has the pattern »01101111«. You could write a word out using this code, and if you give it to someone else, they should be able to decode it exactly.</p>
+
+<p align="justify">Computers can represent pieces of text with sequences of these patterns. For example, the word »computers« (all lower case) would be 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011. This is because »c« is »01100011«, »o« is »01101111«, and so on. Have a look at the ASCII table above to check if we are right!</p>
+
+<p>
+<div class="accordion" id="accordion03">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse03" aria-expanded="true" aria-controls="collapse03">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>The denary number system</strong>
+      </button>
+    </h2>
+    <div id="collapse03" class="accordion-collapse collapse" data-bs-parent="#accordion03">
+      <div class="accordion-body">
+        <p align="justify">The name »ASCII« stands for »American Standard Code for Information Interchange«, which was a particular way of assigning bit patterns to the characters on a keyboard. The ASCII system even includes »characters« for ringing a bell (useful for getting attention on old telegraph systems), deleting the previous character (kind of an early »undo«), and »end of transmission« (to let the receiver know that the message was finished). These days those characters are rarely used, but the codes for them still exist (they are the missing patterns in the table above). Nowadays ASCII has been supplanted by a code called »UTF-8«, which happens to be the same as ASCII if the extra left-hand bit is a 0, but opens up a huge range of characters if the left-hand bit is a 1.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="accordion" id="accordion04">
+  <div class="accordion-item bg-danger-subtle text-danger">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-danger-emphasis collapsed" style="background-color:var(--bs-danger-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse04" aria-expanded="true" aria-controls="collapse04">
+        <i class="fa fa-trophy"></i> &nbsp;<strong>Representing negative numbers with sign bit</strong>
+      </button>
+    </h2>
+    <div id="collapse04" class="accordion-collapse collapse" data-bs-parent="#accordion04">
+      <div class="accordion-body">
+        <p align="justify">Have a go at the following ASCII exercises:
+        <ul align="justify">
+		  <li>How would you represent »science« in ASCII? (ignore the quotation marks)</li>
+          <li>How would you represent »Wellington« in ASCII? (note that it starts with an upper case »W«)</li>
+          <li>How would you represent »358« in ASCII? (it is three characters, even though it looks like a number)</li>
+          <li>How would you represent »Hello, how are you?« in ASCII? (look for the comma, question mark, and space characters in the ASCII table)</li>
+		</ul>
+        Be sure to have a go at all of them before checking the answer!</p>
+		<p align="right"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#answer01">Answers</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<h3>ASCII usage in practice</h3>
+
+<p align="justify">ASCII was first used commercially in 1963, and despite the big changes in computers since then, it is still the basis of how English text is stored on computers. ASCII assigned a different pattern of bits to each of the characters, along with a few other »control« characters, such as delete or backspace.</p>
+
+<p align="justify">English text can easily be represented using ASCII, but what about languages such as Chinese where there are thousands of different characters? Unsurprisingly, the 128 patterns aren’t nearly enough to represent such languages. Because of this, ASCII is not so useful in practice, and is no longer used widely. In the next sections, we will look at Unicode and its representations. These solve the problem of being unable to represent non-English characters.</p>
+
+
+<h2>Introduction to Unicode</h2>
+
+<p align="justify">In practice, we need to be able to represent more than just English characters. To solve this problem, we use a standard called unicode. Unicode is a <b>character set</b> with around 120,000 different characters, in many different languages, current and historic. Each character has a unique number assigned to it, making it easy to identify.</p>
+
+<p align="justify">Unicode itself is not a representation – it is a character set. In order to represent Unicode characters as bits, a Unicode <b>encoding scheme</b> is used. The Unicode encoding scheme tells us how each number (which corresponds to a Unicode character) should be represented with a pattern of bits.</p>
+
+<p align="justify">The following interactive will allow you to explore the Unicode character set. Enter a number in the box on the left to see what Unicode character corresponds to it, or enter a character on the right to see what its Unicode number is (you could paste one in from a foreign language web page to see what happens with non-English characters).</p>
+
+<p id="unicode-characters">
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-keyboard"></i> <strong>Unicode characters</strong></p>
+<form>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="input-group">
+	    <span class="input-group-text" id="number-addon">Unicode number</span>
+	    <input type="text" class="form-control" id="decimal" placeholder="Enter a Unicode number" aria-label="Unicode number" aria-describedby="number-addon" />
+	  </div>
+    </div>
+    <div class="col-md-6">
+	  <div class="input-group">
+	    <span class="input-group-text" id="char-addon">Unicode character</span>
+	    <input type="text" class="form-control" id="character" placeholder="Enter a Unicode character" aria-label="Unicode character" aria-describedby="char-addon" />
+	  </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-12">
+	  <div class="input-group">
+	    <input type="text" class="form-control w-75" id="binary" aria-label="Unicode character" aria-describedby="utf8-addon" readonly />
+        <select class="form-select w-25" id="mode">
+          <option value="utf8" selected>UTF-8</option>
+          <option value="utf16">UTF-16</option>
+          <option value="utf32">UTF-32</option>
+        </select>
+      </div>
+	</div>
+  </div>
+</form>
+</div>
+</p>
+
+<p align="justify">The most widely used Unicode encoding schemes are called UTF-8, UTF-16, and UTF-32; you may have seen these names in email headers or describing a text file. Some of the Unicode encoding schemes are <b>fixed length</b>, and some are <b>variable length</b>. Fixed length means that each character is represented using the same number of bits. Variable length means that some characters are represented with fewer bits than others. It's <b>better to be variable length</b>, as this will ensure that the most commonly used characters are represented with fewer bits than the uncommonly used characters. Of course, what might be the most commonly used character in English is not necessarily the most commonly used character in Japanese. You may be wondering why we need so many encoding schemes for Unicode. It turns out that some are better for English language text, and some are better for Asian language text.</p>
+
+<p align="justify">The remainder of the text representation section will look at some of these Unicode encoding schemes so that you understand how to use them, and why some of them are better than others in certain situations.</p>
+
+
+<h2>UTF-32</h2>
+
+<p align="justify">UTF-32 is a <b>fixed length</b> Unicode encoding scheme. The representation for each character is simply its number converted to a 32 bit binary number. Leading zeroes are used if there are not enough bits (just like how you can represent 254 as a 4 digit decimal number &ndash; 0254). 32 bits is a nice round number on a computer, often referred to as a word (which is a bit confusing, since we can use UTF-32 characters to represent English words!)</p>
+
+<p align="justify">For example, the character <b>H</b> in UTF-32 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+00000000 00000000 00000000 01001000
+</pre>
+</div>
+
+<p align="justify">The character <b>$</b> in UTF-32 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+00000000 00000000 00000000 00100100
+</pre>
+</div>
+
+<p align="justify">And the character <b>犬</b> (dog in Chinese) in UTF-32 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+00000000 00000000 01110010 10101100
+</pre>
+</div>
+
+<p align="justify">The following interactive will allow you to convert a Unicode character to its UTF-32 representation. The Unicode character's number is also displayed. The bits are simply the binary number form of the character number.</p>
+
+<p align="justify">ASCII actually took the same approach. Each ASCII character has a number between 0 and 255, and the representation for the character the number converted to an 8 bit binary number. ASCII is also a fixed length encoding scheme &ndash; every character in ASCII is represented using 8 bits.</p>
+
+<p align="justify">In practice, UTF-32 is rarely used &ndash; you can see that it's pretty wasteful of space. UTF-8 and UTF-16 are both variable length encoding schemes, and very widely used. We will look at them next.</p>
+
+<p>
+<div class="accordion" id="accordion05">
+  <div class="accordion-item bg-danger-subtle text-danger">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-danger-emphasis collapsed" style="background-color:var(--bs-danger-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse05" aria-expanded="true" aria-controls="collapse05">
+        <i class="fa fa-trophy"></i> &nbsp;<strong>How big is 32 bits?</strong>
+      </button>
+    </h2>
+    <div id="collapse05" class="accordion-collapse collapse" data-bs-parent="#accordion05">
+      <div class="accordion-body">
+        <p align="justify">Have a go at the following ASCII exercises:
+        <ul align="justify">
+		  <li>What is the largest number that can be represented with 32 bits? (In both decimal and binary)</li>
+          <li>The largest number in Unicode that has a character assigned to it is not actually the largest possible 32 bit number &ndash; it is 00000000 00010000 11111111 11111111. What is this number in decimal?</li>
+          <li>Most numbers that can be made using 32 bits do not have a Unicode character attached to them &ndash; there is a lot of wasted space. There are good reasons for this, but if you had a shorter number that could represent any character, what is the minimum number of bits you would need, given that there are currently around 120,000 Unicode characters?</li>
+		</ul>
+        Be sure to have a go at all of them before checking the answer!</p>
+		<p align="right"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#answer02">Answers</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+
+<h2>UTF-8</h2>
+
+<p align="justify">UTF-8 is a <b>variable length</b> encoding scheme for Unicode. Characters with a lower Unicode number require fewer bits for their representation than those with a higher Unicode number. UTF-8 representations contain either 8, 16, 24, or 32 bits. Remembering that a <b>byte</b> is 8 bits, these are 1, 2, 3, and 4 bytes.</p>
+
+<p align="justify">For example, the character <b>H</b> in UTF-8 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+01001000
+</pre>
+</div>
+
+<p align="justify">The character <b>ǿ</b> in UTF-8 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+11000111 10111111
+</pre>
+</div>
+
+<p align="justify">And the character <b>犬</b> (dog in Chinese) in UTF-8 would be:</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+11100111 10001010 10101100
+</pre>
+</div>
+
+<h3>How does UTF-8 work?</h3>
+
+<p align="justify">So how does UTF-8 actually work? Use the following process to do what the interactive is doing and convert characters to UTF-8 yourself.</p>
+
+<p align="justify"><b>Step 1</b>. Lookup the Unicode number of your character.</p>
+
+<p align="justify"><b>Step 2</b>. Convert the Unicode number to a binary number, using as <b>few</b> bits as necessary. Look back to the section on binary numbers if you cannot remember how to convert a number to binary.</p>
+
+<p align="justify"><b>Step 3</b>. Count how many bits are in the binary number, and choose the correct pattern to use, based on how many bits there were. Step 4 will explain how to use the pattern.</p>
+
+<div class="alert alert-secondary">
+<pre class="mb-0">
+ 7 or fewer bits: 0xxxxxxx
+11 or fewer bits: 110xxxxx 10xxxxxx
+16 or fewer bits: 1110xxxx 10xxxxxx 10xxxxxx
+21 or fewer bits: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+</pre>
+</div>
+
+<p align="justify"><b>Step 4</b>. Replace the x's in the pattern with the bits of the binary number you converted in Step 2. If there are more x's than bits, replace extra left-most x's with 0's.</p>
+
+<p align="justify">For example, if you wanted to find out the representation for <b>貓</b> (cat in Chinese), the steps you would take would be as follows.</p>
+
+<p align="justify"><b>Step 1</b>. Determine that the Unicode number for <b>貓</b> is <b>35987</b>.</p>
+
+<p align="justify"><b>Step 2</b>. Convert <b>35987</b> to binary &ndash; giving <b>10001100 10010011</b>.</p>
+
+<p align="justify"><b>Step 3</b>. Count that there are <b>16</b> bits, and therefore the third pattern <b>1110xxxx 10xxxxxx 10xxxxx</b> should be used.</p>
+
+<p align="justify"><b>Step 4</b>. Substitute the bits into the pattern to replace the x's &ndash; <b>11101000 10110010 10010011</b>.</p>
+
+<p align="justify">Therefore, the representation for <b>貓</b> is <b>11101000 10110010 10010011</b> using UTF-8.</p>
+
+
+<h2>UTF-16</h2>
+
+<p align="justify">Just like UTF-8, UTF-16 is a <b>variable length</b> encoding scheme for Unicode. Because it is far more complex than UTF-8, we won't explain how it works here.</p>
+
+<p align="justify">However, the <a href="#unicode-characters">interactive above</a> will allow you to represent text with UTF-16. Try putting some text that is in English and some text that is in Japanese into it. Compare the representations to what you get with UTF-8.</p>
+
+
+<h2>Comparison of text representations</h2>
+
+<p align="justify">We have looked at ASCII, UTF-32, UTF-8, and UTF-16. The following table summarises what we have said so far about each representation.</p>
+
+<p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Representation</th>
+      <th>Variable or Fixed</th>
+      <th>Bits per Character</th>
+      <th>Real world Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASCII</td>
+      <td>Fixed Length</td>
+      <td>8 bits</td>
+      <td>No longer widely used</td>
+    </tr>
+    <tr>
+      <td>UTF-8</td>
+      <td>Variable Length</td>
+      <td>8, 16, 24, or 32 bits</td>
+      <td>Very widely used</td>
+    </tr>
+    <tr>
+      <td>UTF-16</td>
+      <td>Variable Length</td>
+      <td>16 or 32 bits</td>
+      <td>Widely used</td>
+    </tr>
+    <tr>
+      <td>UTF-32</td>
+      <td>Fixed Length</td>
+      <td>32 bits</td>
+      <td>Rarely used</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+
+<p align="justify">In order to compare and evaluate them, we need to decide what it means for a representation to be »good«. Two useful criteria are:
+<ol align="justify">
+  <li>Can represent all characters, regardless of language.</li>
+  <li>Represents a piece of text using as few bits as possible.</li>
+</ol>
+</p>
+
+<p align="justify">We know that UTF-8, UTF-16, and UTF-32 can represent all characters, but ASCII can only represent English. Therefore, ASCII fails the first criterion. But for the second criteria, it isn't so simple.</p>
+
+<p align="justify">The following interactive will allow you to find out the length of pieces of text using UTF-8, UTF-16, or UTF-32. Find some samples of English text and Asian text (forums or a translation site are a good place to look), and see how long your various samples are when encoded with each of the three representations. Copy paste or type text into the box.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-keyboard"></i> <strong>Unicode Encoding Size</strong></p>
+<form>
+  <div class="row mb-3">
+    <div class="col-sm-8">
+      <p>Enter text for length calculation:</p>
+      <textarea id="length-text" class="form-control" rows="5" cols="40"></textarea>
+      <a class="btn btn-primary mt-3" id="length-button">Calculate bit lengths</a>
+    </div>
+    <div class="col-sm-4">
+      <p>Encoding lengths:</p>
+      <p><b>UTF-8:</b> <span id="length-utf8">0 bits</span></p>
+      <p><b>UTF-16:</b> <span id="length-utf16">0 bits</span></p>
+      <p><b>UTF-32:</b> <span id="length-utf32">0 bits</span></p>
+    </div>
+  </div>
+</form>
+</div>
+</p>
+
+<p align="justify">As a general rule, UTF-8 is better for English text, and UTF-16 is better for Asian text. UTF-32 always requires 32 bits for each character, so is unpopular in practice.</p>
+
+
+<hr class="mt-5" />
+<p class="text-center display-4">Images and Colours</p>
+<hr class="mb-5" />
+
+
+<p align="justify">In school or art class you may have mixed different colours of paint or dye together in order to make new colours. In painting it's common to use red, yellow and blue as three »primary« colours that can be mixed to produce lots more colours. Mixing red and blue give purple, red and yellow give orange, and so on. By mixing red, yellow, and blue, you can make many new colours.</p>
+
+<p align="justify">For printing, printers commonly use three slightly different primary colours: <b>c</b>yan, <b>m</b>agenta, and <b>y</b>ellow (CMY). All the colours on a printed document were made by mixing these primary colours. In addition, printers use blac<b>k</b> (key) colour (CMYK).</p>
+
+<p align="justify">Both these kinds of mixing are called »subtractive mixing«, because they start with a white canvas or paper, and »subtract« colour from it. The interactive below allows you to experiment with CMYK in case you are not familiar with it, or if you just like mixing colours.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-palette"></i> <strong>CMYK Colour Mixer &ndash; used by Printers</strong></p>
+<form>
+  <div class="row mb-3">
+    <div class="col-sm-6">
+	  <div id="cyan">
+	    <div id="cyan-handle" class="ui-slider-handle">192</div>
+	  </div>
+	  <div id="magenta">
+	    <div id="magenta-handle" class="ui-slider-handle">128</div>
+	  </div>
+	  <div id="yellow">
+	    <div id="yellow-handle" class="ui-slider-handle">64</div>
+	  </div>
+	  <div id="black">
+	    <div id="black-handle" class="ui-slider-handle">0</div>
+	  </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="color-cmyk" class="rounded p-5"></div>
+    </div>
+  </div>
+</form>
+</div>
+</p>
+
+<p align="justify">Computer screens and related devices also rely on mixing three colours, except they need a different set of primary colours because they are <i>additive</i>, starting with a black screen and adding colour to it. For additive colour on computers, the colours <b>r</b>ed, <b>g</b>reen and <b>b</b>lue (RGB) are used. Each pixel on a screen is typically made up of three tiny »lights«; one red, one green, and one blue. By increasing and decreasing the amount of light coming out of each of these three, all the different colours can be made. The following interactive allows you to play around with RGB.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-palette"></i> <strong>RGB Colour Mixer &ndash; used by Screens</strong></p>
+<form>
+  <div class="row mb-3">
+    <div class="col-sm-6">
+	  <div id="red">
+	    <div id="red-handle" class="ui-slider-handle">192</div>
+	  </div>
+	  <div id="green">
+	    <div id="green-handle" class="ui-slider-handle">64</div>
+	  </div>
+	  <div id="blue">
+	    <div id="blue-handle" class="ui-slider-handle">128</div>
+	  </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="color-rgb" class="rounded p-5"></div>
+    </div>
+  </div>
+</form>
+</div>
+</p>
+
+<p align="justify">See what colours you can make with the <b>RGB</b> interactive. Can you make black, white, shades of grey, yellow, orange, and purple?</p>
+
+<div class="alert alert-secondary">
+  <center>
+    <img src="img/Barns_grand_tetons.png" class="img-fluid mb-3">
+  </center>
+  <ul class="nav nav-underline mx-auto" id="image-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="rgb-tab" data-bs-toggle="tab" data-bs-target="#rgb" type="button" role="tab" aria-controls="rgb" aria-selected="true">RGB</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="cmy-tab" data-bs-toggle="tab" data-bs-target="#cmy" type="button" role="tab" aria-controls="cmy" aria-selected="false">CMY</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="cmyk-tab" data-bs-toggle="tab" data-bs-target="#cmyk" type="button" role="tab" aria-controls="cmyk" aria-selected="false">CMYK</button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3" id="video-content">
+    <div class="tab-pane fade show active" id="rgb" role="tabpanel" aria-labelledby="rgb-tab">
+      <img src="img/Barns_grand_tetons_RGB.png" class="img-fluid mb-3">
+    </div>
+    <div class="tab-pane fade" id="cmy" role="tabpanel" aria-labelledby="cmy-tab">
+      <img src="img/Barns_grand_tetons_CMY.png" class="img-fluid mb-3">
+    </div>
+    <div class="tab-pane fade" id="cmyk" role="tabpanel" aria-labelledby="cmyk-tab">
+      <img src="img/Barns_grand_tetons_CMYK.png" class="img-fluid mb-3">
+    </div>
+  </div>
+</div>
+
+<p>
+<div class="accordion" id="accordion06">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse06" aria-expanded="true" aria-controls="collapse06">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>Primary colours and the human eye</strong>
+      </button>
+    </h2>
+    <div id="collapse06" class="accordion-collapse collapse" data-bs-parent="#accordion06">
+      <div class="accordion-body">
+        <p align="justify">There's a very good reason that we mix three primary colours to specify the colour of a pixel. The human eye has millions of light sensors in it, and the ones that detect colour are called »cones«. There are three different kinds of cones, which detect red, blue, and green light respectively. Colours are perceived by the amount of red, blue, and green light in them. Computer screen pixels take advantage of this by releasing the amounts of red, blue, and green light that will be perceived as the desired colour by your eyes. So when you see »purple«, it's really the red and blue cones in your eyes being stimulated, and your brain converts that to a perceived colour. Scientists are still working out exactly how we perceive colour, but the representations used on computers seem to be good enough give the impression of looking at real images.</p>
+		<p align="center"><img src="img/pixels-on-screens.jpg" class="img-fluid" /></p>
+		<p align="justify">For more information about RGB displays, see <a href="https://en.wikipedia.org/wiki/Rgb" target="_blank">RGB on Wikipedia</a>; for more information about the eye sensing the three colours, see <a href="https://en.wikipedia.org/wiki/Cone_cell" target="_blank">Cone cell</a> and <a href="https://en.wikipedia.org/wiki/Trichromacy" target="_blank">trichromacy</a> on Wikipedia.</p>
+		<p align="justify">When printing we can have different saturations of the primary colors and thus display different shades of the primary colors. This is achieved by <a href="https://en.wikipedia.org/wiki/Halftone" target="_blank">halftone</a> technique, that is printing different sizes of dots in the primary colors, which can also be spaced apart. From a sufficiently large distance, the human eye perceives the pattern of dots of the primary colors as a shade of a certain color. So if we print the color magenta with a 20% halftone, the eye will perceive small dots of the color magenta on a large white surface of a sheet of paper as »pink« (or a less saturated color magenta).</p>
+		<p align="justify">The image shows enlargements of different patterns of dots of different sizes of the primary colors, which the human eye perceives from a sufficiently large distance as different colors or different shades.</p>
+		<p align="center"><img src="img/pixels-on-prints.png" class="img-fluid" /></p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+
+<h2>Describing a colour with numbers</h2>
+
+<p align="justify">Because a colour is simply made up of amounts of the primary colours (red, green and blue), three numbers can be used to specify how much of each of these primary colours is needed to make the overall colour.</p>
+
+<p>
+<div class="accordion" id="accordion07">
+  <div class="accordion-item bg-info-subtle text-info-emphasis">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-info-emphasis collapsed" style="background-color:var(--bs-info-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse07" aria-expanded="true" aria-controls="collapse07">
+        <i class="fa fa-info-circle"></i> &nbsp;<strong>Pixel</strong>
+      </button>
+    </h2>
+    <div id="collapse07" class="accordion-collapse collapse" data-bs-parent="#accordion07">
+      <div class="accordion-body">
+        <p align="justify">The word pixel is short for »picture element«. On computer screens and printers an image is almost always displayed using a grid of pixels, each one set to the required colour. A pixel is typically a fraction of a millimeter across, and images can be made up of millions of pixels (one megapixel is a million pixels), so you can't usually see the individual pixels. Photographs commonly have several megapixels in them.</p>
+		<p align="justify">It's not unusual for computer screens to have millions of <i>pixels</i> on them, and the computer needs to represent a colour for each one of those pixels.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p align="justify">A commonly used scheme is to use numbers in the range 0 to 255. Those numbers tell the computer how fully to turn on each of the primary colour »lights« in an individual pixel. If red was set to 0, that means the red »light« is completely off. If the red »light« was set to 255, that would mean the »light« was fully on.</p>
+
+<p align="justify">With 256 possible values for each of the three primary colours (don't forget to count 0!), that gives 256 × 256 × 256 = 16,777,216 possible colours &ndash; more than the human eye can detect!</p>
+
+
+<h2>Representing a colour with bits</h2>
+
+<p align="justify">The next thing we need to look at is how bits are used to represent each colour in a high quality image. Firstly, how many bits do we need? Secondly, how should we decide the values of each of those bits? This section will work through those problems.</p>
+
+<h3>How many bits will we need for each colour in the image?</h3>
+
+<p align="justify">With 256 different possible values for the amount of each primary colour, this means 8 bits would be needed to represent the number.</p>
+
+<p>2<sup>8</sup> = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256</p>
+
+<p align="justify">The smallest number that can be represented using 8 bits is 00000000 &ndash; which is 0. And the largest number that can be represented using 8 bits is 11111111 &ndash; which is 255.</p>
+
+<p align="justify">Because there are three primary colours, each of which will need 8 bits to represent each of its 256 different possible values, we need <b>24 bits in total</b> to represent a colour.</p>
+
+<p>3 × 8 = 24</p>
+
+<p align="justify">So, how many colours are there in total with 24 bits? We know that there is 256 possible values each colour can take, so the easiest way of calculating it is:</p>
+
+<p>256 × 256 × 256 = 16,777,216</p>
+
+<p align="justify">This is the same as 2<sup>24</sup>.</p>
+
+<p align="justify">Because 24 bits are required, this representation is called <b>24 bit colour</b>. 24 bit colour is sometimes referred to in settings as »True Color« (because it is more accurate than the human eye can see). On Apple systems, it is called »Millions of colours«.</p>
+
+<h3>How do we use bits to represent the colour?</h3>
+
+<p align="justify">A logical way is to use 3 binary numbers that represent the amount of each of red, green, and blue in the pixel. In order to do this, convert the amount of each primary colour needed to an 8 bit binary number, and then put the 3 binary numbers side by side to give 24 bits.</p>
+
+<p align="justify">Because consistency is important in order for a computer to make sense of the bit pattern, we normally adopt the convention that the binary number for red should be put first, followed by green, and then finally blue. The only reason we put red first is because that is the convention that most systems assume is being used. If everybody had agreed that green should be first, then it would have been green first.</p>
+
+<p align="justify">For example, suppose you have the colour that has red = 145, green = 50, and blue = 123 that you would like to represent with bits. If you put these values into the interactive, you will get the colour below.</p>
+
+<p align="center"><img src="img/colour-purple.png" class="img-fluid" /></p>
+
+<p align="justify">Start by converting each of the three numbers into binary, using 8 bits for each. You should get:
+<ul>
+<li>red = 10010001,</li>
+<li>green = 00110010,</li>
+<li>blue = 01111011.</li>
+</ul>
+</p>
+
+<p align="justify">Putting these values together gives 100100010011001001111011, which is the bit representation for the colour above.</p>
+
+<p align="justify">There are <b>no spaces</b> between the three numbers, as this is a pattern of bits rather than actually being three binary numbers, and computers don’t have any such concept of a space between bit patterns anyway &ndash; everything must be a 0 or a 1. You could write it with spaces to make it easier to read, and to represent the idea that they are likely to be stored in 3 8-bit bytes, but inside the computer memory there is just a sequence of high and low voltages, so even writing 0 and 1 is an arbitrary notation.</p>
+
+<p align="justify">Also, all leading and trailing 0’s on each part are kept – without them, it would be representing a shorter number. If there were 256 different possible values for each primary colour, then the final representation <b>must</b> be 24 bits long.</p>
+
+<p>
+<div class="accordion" id="accordion08">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse08" aria-expanded="true" aria-controls="collapse08">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>Monochromatic images</strong>
+      </button>
+    </h2>
+    <div id="collapse08" class="accordion-collapse collapse" data-bs-parent="#accordion08">
+      <div class="accordion-body">
+        <p align="justify">»Black and white« images usually have more than two colours in them; typically 256 shades of grey, represented with 8 bits.</p>
+		<p align="justify">Remember that shades of grey can be made by having an equal amount of each of the 3 primary colours, for example red = 105, green = 105, and blue = 105.</p>
+		<p align="justify">So for a monochromatic image, we can simply use a representation which is a single binary number between 0 and 255, which tells us the value that all 3 primary colours should be set to.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p align="justify">The computer won’t ever convert the number into decimal, as it works with the binary directly – most of the process that takes the bits and makes the right pixels appear is typically done by a graphics card or a printer. We just started with decimal because it is easier for humans to understand. The main point about knowing this representation is to understand the trade-off that is being made between the accuracy of colour (which should ideally be beyond human perception) and the amount of storage (bits) needed (which should be as little as possible).</p>
+
+<p>
+<div class="accordion" id="accordion09">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse09" aria-expanded="true" aria-controls="collapse09">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>Hexadecimal colour codes</strong>
+      </button>
+    </h2>
+    <div id="collapse09" class="accordion-collapse collapse" data-bs-parent="#accordion09">
+      <div class="accordion-body">
+        <p align="justify">If you haven't already, read the subsection on hexadecimal in the <a href="page1.html">data representation</a> section, otherwise this section might not make sense!</p>
+        <p align="justify">When writing HTML code, you often need to specify colours for text, backgrounds, and so on. One way of doing this is to specify the colour name, for example »red«, »blue«, »purple«, or »gold«. For some purposes, this is okay.</p>
+        <p align="justify">However, the use of names limits the number of colours you can represent and the shade might not be exactly the one you wanted. A better way is to specify the 24 bit colour directly. Because 24 binary digits are hard to read, colours in HTML use <b>hexadecimal codes</b> as a quick way to write the 24 bits, for example <code>#00FF9E</code>. The hash sign means that it should be interpreted as a hexadecimal representation, and since each hexadecimal digit corresponds to 4 bits, the 6 digits represent 24 bits of colour information.</p>
+        <p align="justify">This »hex triplet« format is used in HTML pages to specify colours for things like the background of the page, the text, and the colour of links. It is also used in CSS, SVG, and other applications.</p>
+        <p align="justify">In the 24 bit colour example earlier, the 24 bit pattern was <code>100100010011001001111011</code>.</p>
+        <p align="justify">This can be broken up into groups of 4 bits: <code>1001 0001 0011 0010 0111 1011</code>.</p>
+        <p align="justify">And now, each of these groups of 4 bits will need to be represented with a <b>hexadecimal</b> digit.
+		<ul>
+		  <li>1001 &rarr; 9</li>
+		  <li>0001 &rarr; 1</li>
+		  <li>0011 &rarr; 3</li>
+		  <li>0010 &rarr; 2</li>
+		  <li>0111 &rarr; 7</li>
+		  <li>1011 &rarr; B</li>
+		</ul>
+		</p>
+        <p align="justify">Which gives <code>#91327B</code>.</p>
+        <p align="justify">Understanding how these hexadecimal colour codes are derived also allows you to change them slightly without having to refer back to the colour table, when the colour isn’t exactly the one you want. Remember that in the 24 bit color code, the first 8 bits specify the amount of red (so this is the first 2 digits of the hexadecimal code), the next 8 bits specify the amount of green (the next 2 digits of the hexadecimal code), and the last 8 bits specify the amount of blue (the last 2 digits of the hexadecimal code). To increase the amount of any one of these colours, you can change the appropriate hexadecimal characters.</p>
+        <p align="justify">For example, <code>#000000</code> has zero for red, green and blue, so setting a higher value to the middle two digits (such as <code>#004300</code>) will add some green to the colour.</p>
+        <p align="justify">You can use this HTML page to experiment with hexadecimal colours. Just enter a colour in the space below to change the background colour:</p>
+        <p>
+		<form class="row">
+		  <div class="col-sm-2 mb-3">
+		    <div class="input-group">
+              <span class="input-group-text" id="hash-addon">#</span>
+              <input type="text" size="6" id="hexcolor" class="form-control" placeholder="FFFFFF" aria-label="Background color" aria-describedby="hash-addon">
+			</div>
+          </div>
+		  <div class="col-sm-4 mb-3">
+		    <button type="submit" id="submit" class="btn btn-success"><span class="fa fa-paint-brush"></span> Recolor</button>
+		    <button type="cancel" id="reset" class="btn btn-success">Cancel</button>
+		  </div>
+		  <div class="col-sm-6 mb-3"></div>
+		</form>
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+
+<hr class="mt-5" />
+<p class="text-center display-4">Audio</p>
+<hr class="mb-5" />
+
+
+<p align="justify">Audio can be represented in a computer as a series of bits. This is achieved by sampling the audio, with each individual sample represented by a series of bits. The total sequence of bits thus represents a song or sound in a digital form. In order to listen to digitally recorded songs, they must be converted back to analog form before being played through speakers.</p>
+
+<p align="justify">There are two fundamentally different ways of recording audio in a computer. In the first method the audio is sampled with more or less accurate recording of an analog sound wave. In the second method the audio is described as a different sequence of tones or chords (groups of tones) of different lengths. The computer plays such songs by essentially playing pre-recorded sounds of various musical instruments.</p>
+
+
+<h2>Nature of the sound</h2>
+
+<p align="justify">Sound is a wave that travels through solids, liquids, or gases. In liquids and gases, sound is always a longitudinal wave, but in solids, it is also possible to produce transverse sound waves. Sound can be defined by its <b>frequency</b> and the <b>amplitude</b> of the sound pressure. Frequency is related to the pitch of the sound, and amplitude is related to the loudness of the sound.</p>
+
+<p align="justify">A loudspeaker works by moving a central cone of a membrane in and out, causing air particles to combine into waves. These waves spread out from the loudspeaker and travel through the air at a speed of <a href="https://en.wikipedia.org/wiki/Speed_of_sound" target="_blank">340 m/s</a>. If your ear is in the path of the waves, the waves of sound particles will collide with your eardrum, which will vibrate and send a message to your brain. This is how you hear:</p>
+
+<p align="center"><img src="img/CPT-sound-physical-manifestation.png" class="img-fluid color-invertible w-75" /></p>
+
+<p align="justify">When you hear sounds of different pitches and loudness, it's basically because each sound wave has a different amount of energy, which means the loudness of the sound (more energy means a louder sound) and a different distance between individual waves, which means the pitch of the sound (a smaller distance between waves means a higher sound).</p>
+
+<p align="justify">The noise levels (and frequencies) of various sounds are shown in the chart below. For example, rustling leaves have a volume of 10 dB, whispering has a volume of 20-30 dB, birdsong has a volume of 30-40 dB, normal rain has a volume of 50 dB, normal conversation has a volume of 60 dB, a mobile phone ringing has a volume of 70 dB, a motorbike has a volume of 80 dB, a car has a volume of 90 dB, a truck has a volume of 100 dB, a rock concert has a volume of 110 dB, an airplane has a volume of 120 dB, and a jet engine has a volume of 140 dB.</p>
+
+<p align="justify">The pain threshold for humans is around 120 dB, and at 140 dB, immediate damage to the auditory nerves in the ear occurs.</p>
+
+<p align="center"><img src="img/noise-levels.png" class="img-fluid color-invertible" /></p>
+
+
+<h2>Analog and digital</h2>
+
+<p align="justify">If we want a computer to be able to store audio files, we need to convert continuous analog sound waves into digital binary values, as shown in the image below.</p>
+
+<p align="center"><img src="img/analog-digital.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">An analog sound wave is captured by a microphone, which converts it into analog electrical signals. The microphone sends the analog electrical signals to an analog-to-digital converter (ADC). The ADC converts the electrical signals into digital binary values ​​that can be stored on a computer.</p>
+
+<p align="justify">Once the sound has been recorded or stored in digital form, it can be edited using audio editing software such as Audacity. Editing audio means that you can apply various sound effects and/or filters, and you can also apply various audio conversions.</p>
+
+<p align="justify">To play back audio in digital form, a digital-to-analog converter (DAC) is used, which converts the digital binary values ​​into analog electrical signals. These analog electrical signals are transmitted to a speaker, which vibrates. The vibrations of the speaker move the air or air particles, which create sound waves and analog noise.</p>
+
+
+<h2>Sampling audio</h2>
+
+<p align="justify">How does an analog-to-digital converter actually convert an analog sound wave into digital values? The answer to this question lies in how computers sample sound. Sampling means that at regular intervals, we read the value of the sound wave and store it &ndash; this is called a sound recording.</p>
+
+<p align="justify">Values ​​of the sound wave can be unsigned or signed. If we use 4 bits to record each value, we can record unsigned values ​​between 0 and 15 or signed values ​​between &minus;8 and 7.</p>
+
+<p align="justify"><b>Sampling rate</b> is the number of samples read per second and is measured in hertz (Hz). <b>Sampling resolution</b> is the number of bits used to record each sample. Therefore, sampling resolution is sometimes also called <i>bit resolution</i>.</p>
+
+<p align="justify">Let's look at the example of sampling a sound wave. We sample every second, so the sampling rate is 1 Hz. Every second we read the decimal value of the sound wave and convert it to a binary value. Binary values ​​will be rounded to the nearest integer &ndash; negative numbers are written in two's complement (see the table).</p>
+
+<p align="justify">If we plot the time samples back on the same graph (by turning on the »Sampling« option) and connect them, we can see that the sound wave now looks different than before. This is because sampling does not take into account what is happening to the sound wave between each sample.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-volume-up"></i> <strong>Sound sampling</strong></p>
+  <div id="jxgbox1" class="jxgbox" style="width:480px;height:400px;"></div>
+  <table border="0" width="50%" style="margin:12px; padding:4px;">
+	<tr>
+	  <td>Sampling:</td>
+	  <td>
+	    <div id="sampler">
+		  <div id="sampler-handle" class="ui-slider-handle">No</div>
+		</div>
+      </td>
+	</tr>
+  </table>
+</div>
+</p>
+
+<p>
+<table class="table table-striped">
+  <tr align="center">
+    <th>&nbsp;Time</th>
+	<td>0</td>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+	<td>5</td>
+	<td>6</td>
+	<td>7</td>
+	<td>8</td>
+	<td>9</td>
+	<td>10</td>
+	<td>11</td>
+  </tr>
+  <tr align="center">
+    <th>Dec</th>
+	<td>0</td>
+	<td>4</td>
+	<td>6</td>
+	<td>3</td>
+	<td>-1</td>
+	<td>-1</td>
+	<td>3</td>
+	<td>4</td>
+	<td>2</td>
+	<td>2</td>
+	<td>2</td>
+	<td>1</td>
+  </tr>
+  <tr align="center">
+    <th>Bin</th>
+	<td>0000</td>
+	<td>0100</td>
+	<td>0110</td>
+	<td>0011</td>
+	<td>1111</td>
+	<td>1111</td>
+	<td>0011</td>
+	<td>0100</td>
+	<td>0010</td>
+	<td>0010</td>
+	<td>0010</td>
+	<td>0001</td>
+  </tr>
+</table>
+</p>
+
+<p align="justify">The fact that the digital waveform (digital values ​​connected to each other) differs from the analog waveform means that the representation of sound in digital form loses quality, as data is lost between individual time samples. If we want to increase the quality of digital sound and store it in a way that is as similar as possible to the analog original, we need to sample it as often as possible. In this way, we read as much data about the analog sound as possible, which allows us to convert from digital back to analog as similar as possible to the original.</p>
+
+<p align="justify">However, we must be aware that more values we ​​read, means the larger file in which we store the digital sound. Therefore, the question arises, what should be the sampling frequency? The answer to this question is known and is called the »Nyquist Sampling Theorem«, which was first written by Harry Nyquist and later proven by Claude Shannon.</p>
+
+<div class="bd-callout bd-callout-secondary">
+<p><i class="fa fa-key"></i> <strong>Nyquist Sampling Theorem</strong></p>
+<p align="justify">The sampling frequency should be twice the highest frequency that we want to capture.</p>
+</div>
+
+<p align="justify">For example, the highest frequency of sound that humans can hear is about 20 kHz (20,000 cycles per second), but some people can hear as high as 22 kHz. So we need to capture music at a sampling rate of 44 kHz (44,000 times per second). This is the sampling rate for CD-quality music (actually, the sampling rate is 44.1 kHz).</p>
+
+<p>
+<div class="accordion" id="accordion10">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>Standard sound sampling rates</strong>
+      </button>
+    </h2>
+    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordion10">
+      <div class="accordion-body">
+        <p align="justify">
+		<table class="table table-striped">
+		  <thead>
+			<tr>
+			  <th>Sampling rate</th>
+			  <th>Usage</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>&nbsp;&nbsp;8000 Hz</td>
+			  <td>Telephone</td>
+			</tr>
+			<tr>
+			  <td>16000 Hz</td>
+			  <td>Broadband phone</td>
+			</tr>
+			<tr valign="top">
+			  <td>11025 Hz<br>22050 Hz<br>32000 Hz</td>
+			  <td>Lower quality PCM sampling, MPEG</td>
+			</tr>
+			<tr>
+			  <td>44056 Hz</td>
+			  <td>NTSC TV</td>
+			</tr>
+			<tr>
+			  <td>44100 Hz</td>
+			  <td>CD-quality sound</td>
+			</tr>
+			<tr>
+			  <td>48000 Hz</td>
+			  <td>DVD-quality sound</td>
+			</tr>
+			<tr>
+			  <td>96000 Hz</td>
+			  <td>Blue-ray-qualiry sound</td>
+			</tr>
+		  </tbody>
+		</table>
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+<p align="justify">Different sounds can be at different levels of loudness. Sampling resolution allows you to set the amount of storage for each sample. At low sampling resolutions, the volume range is very limited, while at high sampling resolutions, the file size can become too large. The sampling resolution for music at CD-quality audio is 16 bits, and at DVD-quality audio it is 24 bits.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-volume-up"></i> <strong>Sound sampling frequency</strong></p>
+  <p align="justify">Change the sampling frequency using the slider below and observe how the higher frequency menas better approximation of the analog sound source.</p>
+  <div id="jxgbox2" class="jxgbox" style="width:480px;height:400px;"></div>
+  <table border="0" width="50%" style="margin:12px; padding:4px;">
+	<tr>
+	  <td>Sampling frequency:</td>
+	  <td>
+	    <div id="sampler2">
+		  <div id="sampler2-handle" class="ui-slider-handle">0 Hz</div>
+		</div>
+      </td>
+	</tr>
+  </table>
+</div>
+</p>
+
+
+<h2>Recording audio to files</h2>
+
+<p align="justify">The size of an uncompressed audio file depends on the number of bits per second, called the <b>bit rate</b>, and the length of the audio (in seconds). The bit rate depends on:
+<ul align="justify">
+  <li>the sampling frequency or frequency (horizontal axis of the graph) and</li>
+  <li>the sampling resolution or bit resolution (vertical axis of the graph).</li>
+</ul>
+</p>
+
+<p align="justify">The sampling frequency (&nu;) of CD-quality music is 44.1 kHz and the sampling resolution (&fnof;<sub>&nu;</sub>) of CD-quality music is 16 bits. Using these two pieces of information, we can calculate the bit rate. To calculate the file size, we need to multiply the bit rate with the duration of the recording (in seconds):<br>
+<center>
+bit rate = v<sub>b</sub> = &nu; &middot; &fnof;<sub>&nu;</sub><br>
+file size = v<sub>b</sub> &middot; t = &nu; &middot; &fnof;<sub>&nu;</sub> &middot; t
+</center>
+</p>
+
+<p align="justify">For example, let's look at how many bits are needed to record 1 second of mono music in CD-quality:<br>
+<center>
+44,100 Hz &middot; 16 b &middot; 1 s = 705,600 b &rArr; 705,600 b / 8 = 88,200 B &thickapprox; 86 kB
+</center>
+</p>
+
+<p align="justify">That's 86 kB for just one second of music! But that's not even stereo music! To record stereo music, we need to add 86 kB for the second channel, which makes a total of 172 kB per second (about 1411 kbps).</p>
+
+<p align="justify">To record one hour of music in CD-quality, we need:<br>
+<center>
+172 kB/s &middot; 3600 s = 619,200 kB &thickapprox; 604 MB
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-file-audio"></i> <strong>Audio file size</strong></p>
+  <form id="calculator" method="post">
+    <div class="input-group mb-3 w-50">
+      <span class="input-group-text w-50" id="hertz-label">Sampling frequency</span>
+      <select class="form-select" id="frequency" name="frequency">
+        <option  value="8000">8000</option>
+        <option  value="11025">11025</option>
+        <option  value="16000">16000</option>
+        <option  value="22050">22050</option>
+        <option  value="32000">32000</option>
+        <option  value="44056">44056</option>
+        <option selected value="44100">44100</option>
+        <option  value="48000">48000</option>
+        <option  value="96000">96000</option>
+      </select>
+      <span class="input-group-text" id="hertz-addon">Hz</span>
+    </div>
+
+    <div class="input-group mb-3 w-50">
+      <span class="input-group-text w-50" id="bits-label">Sampling resolution</span>
+      <select class="form-select" id="resolution" name="resolution">
+        <option  value="8">8</option>
+        <option selected value="16">16</option>
+        <option  value="24">24</option>
+      </select>
+      <span class="input-group-text" id="bits-addon">bit</span>
+    </div>
+
+    <div class="input-group mb-3 w-50">
+      <span class="input-group-text w-50" id="seconds-label">Recording duration</span>
+      <input type="text" class="form-control" id="length" name="length" value="1" />
+      <span class="input-group-text" id="seconds-addon">s</span>
+    </div>
+
+    <div style="padding:10px 5px 5px 5px">
+      bit rate = <span id="rate">705600</span> bps = <span id="kilorate">705.60</span> kbps
+    </div>
+    <div style="padding:5px">
+	  file size = <span id="bitsize">705600</span> b = <span id="bytesize">88200</span> B = <span id="kilosize">86.13</span> kB = <span id="megasize">0.08</span> MB
+    </div>
+  </form>
+</div>
+</p>
+
+
+<h2>Describing audio &ndash; MIDI</h2>
+
+<p align="justify">In 1983, musical instrument manufacturers agreed on the <b>MIDI</b> standard, which stands for »Musical Instrument Digital Interface«.</p>
+
+<p align="justify">There are many different types of devices that use MIDI &ndash; from mobile phones to digital musical instruments to personal computers. What all MIDI devices have in common is that they speak the MIDI »language«. This language describes the process of creating sound, or more precisely, playing music, in a similar way to musical notation: there are MIDI messages that describe which notes should be played, for how long and at what tempo, which instruments should be used to play them, and at what relative volume.</p>
+
+<p align="justify">MIDI is not sound. If someone says MIDI sounds bad, they don’t understand how MIDI works. Imagine taking the sheet music or score of a Beethoven piece and giving it to someone who can read music but has never played the violin. Then giving them a cheap violin &ndash; the music they play will probably sound pretty bad. Now give the same sheet music to the »first violin« of a symphony orchestra playing a Stradivari violin &ndash; the music will probably sound wonderful. Similarly, MIDI depends on the quality of the player and how well the description of the music fits that player.</p>
+
+<p align="justify">MIDI is a descriptive language, so it is extremely flexible. Because MIDI data is just performance instructions and not a digital version of a sound recording, it is actually easy to change the performance. This means that we can change just one incorrectly written note, or we can change all the notes so that we can play the song in a new key, at a different tempo, or on different instruments.</p>
+
+<p align="justify">The ability to edit, change, add, remove, speed up, or slow down any part of the song is what makes MIDI so valuable for creating, playing, and learning about music. MIDI is not just a way to connect devices. This standard also contains a vast set of »musical commands« that electronic instruments use to control each other.</p>
+
+<p align="justify">Using the interactive keyboard below, try sending different MIDI messages. You can press and release a key to send <i>NoteOn</i> and <i>NoteOff</i> messages. You can click the keys with the mouse, or use the keyboard keys that are listed. You can also change the instrument to send a <i>ProgramChange</i> message. You can also change the volume and the channel on which the messages will travel. You can view the messages in decimal (Dec) or hexadecimal (Hex) mode.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-music"></i> <strong>Interactive keyboard</strong></p>
+	<div class="keyboard-options">
+	  <form class="form-inline">
+	  <table>
+	  <tr>
+        <td class="pe-2">		
+		  <label for="midi-channel">Channel:</label>
+		  <select ID="midi-channel" class="form-select">
+			<option value="0" selected>1</option>
+			<option value="1">2</option>
+			<option value="2">3</option>
+			<option value="3">4</option>
+			<option value="4">5</option>
+			<option value="5">6</option>
+			<option value="6">7</option>
+			<option value="7">8</option>
+			<option value="8">9</option>
+			<option value="9">10</option>
+			<option value="10">11</option>
+			<option value="11">12</option>
+			<option value="12">13</option>
+			<option value="13">14</option>
+			<option value="14">15</option>
+			<option value="15">16</option>
+		  </select>
+		</td>
+		<td class="pe-2">
+		  <label for="midi-sound">Instrument:</label>
+		  <select ID="midi-sound" class="form-select">
+			<option value="0" selected>Piano</option>
+			<option value="1">Organ</option>
+			<option value="2">Guitar</option>
+		  </select>
+		</td>
+		<td class="pe-2">
+		  <label for="midi-velocity">Loudness:</label>
+		  <select ID="midi-velocity" class="form-select">
+			<option value="0">pppp</option>
+			<option value="14">ppp</option>
+			<option value="28">pp</option>
+			<option value="42">p</option>
+			<option value="56">mp</option>
+			<option value="70" selected>mf</option>
+			<option value="84">f</option>
+			<option value="98">ff</option>
+			<option value="112">fff</option>
+			<option value="127">ffff</option>
+		  </select>
+		</td>
+		<td class="pe-2">
+		  <label for="output">Range:</label><br />
+		  <input type="button" class="btn btn-primary" ID="-_OCTAVE" value="<" />
+		  <input type="button" class="btn btn-primary" ID="+_OCTAVE" value=">" />
+		</td>
+		<td class="pe-2">
+		  <label for="midi-output">MIDI output:</label>
+		  <select ID="midi-output" class="form-select">
+			<option value="10" selected>Dec</option>
+			<option value="16">Hex</option>
+		  </select>
+		</td>
+	  </tr>
+	  </table>
+	  </form>
+	  <div ID="keyboard" class="keyboard-holder"></div>
+	  <div class="keyboard-options">
+	    <button id="midi-clear" class="btn btn-primary float-end">Clear</button>
+		Range [C<sub><span ID="OCTAVE_LOWER">3</span></sub>-H<sub><span ID="OCTAVE_UPPER">5</span></sub>]<br />
+		<i>(Use the left/right arrow keys to adjust the range.)</i>
+	  </div>
+	</div>
+</div>
+</p>
+
+<p>
+<textarea id="midi-messages" style="height:11em">
+192 0
+</textarea>
+<p>
+
+<p>
+<div class="accordion" id="accordion11">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>MIDI messages</strong>
+      </button>
+    </h2>
+    <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordion11">
+      <div class="accordion-body">
+		  <ul class="nav nav-underline mx-auto" id="image-tabs" role="tablist">
+			<li class="nav-item" role="presentation">
+			  <button class="nav-link active" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="true">Messages</button>
+			</li>
+			<li class="nav-item" role="presentation">
+			  <button class="nav-link" id="chords-tab" data-bs-toggle="tab" data-bs-target="#chords" type="button" role="tab" aria-controls="chords" aria-selected="false">Chords</button>
+			</li>
+			<li class="nav-item" role="presentation">
+			  <button class="nav-link" id="instruments-tab" data-bs-toggle="tab" data-bs-target="#instruments" type="button" role="tab" aria-controls="instruments" aria-selected="false">Instruments</button>
+			</li>
+			<li class="nav-item" role="presentation">
+			  <button class="nav-link" id="percussion-tab" data-bs-toggle="tab" data-bs-target="#percussion" type="button" role="tab" aria-controls="percussion" aria-selected="false">Percussion</button>
+			</li>
+			<li class="nav-item" role="presentation">
+			  <button class="nav-link" id="channels-tab" data-bs-toggle="tab" data-bs-target="#channels" type="button" role="tab" aria-controls="channels" aria-selected="false">Channels</button>
+			</li>
+		  </ul>
+
+		  <div class="tab-content mt-3" id="video-content">
+			<div class="tab-pane fade show active" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+			  <p>Messages</p>
+			</div>
+			<div class="tab-pane fade" id="chords" role="tabpanel" aria-labelledby="chords-tab">
+			  <p>Chords</p>
+			</div>
+			<div class="tab-pane fade" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
+			  <p>Instruments</p>
+			</div>
+			<div class="tab-pane fade" id="percussion" role="tabpanel" aria-labelledby="percussion-tab">
+			  <p>Percussion</p>
+			</div>
+			<div class="tab-pane fade" id="channels" role="tabpanel" aria-labelledby="channels-tab">
+			  <p>Channels</p>
+			</div>
+		  </div>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+
+<hr class="mt-5" />
+<p class="text-center display-4">Video</p>
+<hr class="mb-5" />
+
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
 <!-- Content end -->
       </div>
 
@@ -416,6 +1838,57 @@ $(document).ready(function() {
 		$("#hexcolor").val("");
 	});
 });
+</script>
+
+<!-- JSXGraph - Dynamic Mathematics with JavaScript -->
+<script src="../js/jsxgraph/jsxgraphcore.js"></script>
+
+<!-- Sound Sampler -->
+<script src="js/sound-sampler.js"></script>
+
+<!-- Sound Sampler -->
+<script src="js/sound-sampler10.js"></script>
+
+<!-- Audio file size interactivity -->
+<script>
+	function recalculate() {
+		var frequency = $('#frequency').val();
+		var resolution = $('#resolution').val();
+		var length = $('#length').val();
+
+		var rate = frequency * resolution;
+		var size = rate * length;
+
+		$('#rate').text(rate);
+		$('#kilorate').text((rate/1000).toFixed(2).toString());
+
+		$('#bitsize').text(size);
+		$('#bytesize').text((size/8).toFixed(2).toString());
+		$('#kilosize').text((size/(8*1024)).toFixed(2).toString());
+		$('#megasize').text((size/(8*1024*1024)).toFixed(2).toString());
+	}
+
+	$('#frequency').on('change', function() {
+		recalculate();
+	});
+	$('#resolution').on('change', function() {
+		recalculate();
+	});
+	$('#length').on('change', function() {
+		recalculate();
+	});
+	document.getElementById('calculator').addEventListener('submit', function(e) {
+		e.preventDefault();
+		recalculate();
+	});
+</script>
+
+<!-- AudioSynth JS -->
+<script src="js/audiosynth.js"></script>
+<script src="js/audiosynth.view.js"></script>
+<script type="text/javascript">
+	var a = new AudioSynthView();
+	a.draw();
 </script>
 
 <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>

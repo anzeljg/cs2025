@@ -1,0 +1,90 @@
+/*   --- BITS ---  */
+
+#fp0, #fp1, #fp2,
+#fp7, #fp8, #fp9, #fp10,
+#fp15, #fp16, #fp17, #fp18,
+#fp23, #fp24, #fp25, #fp26,
+#fp31
+ {
+    color: crimson !important;    
+}
+
+/* end BITS */
+
+.float-output-table {
+    margin: 10px 0;
+    border: 1px solid var(--bs-body-color);
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    -ms-font-feature-settings: 'tnum';
+}
+
+.float-output-row td span {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 3px 0 0 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.float-output-row td span {
+    width: 20px;
+}
+
+.float-marker-row td {
+    text-align: center;
+    font-size: 9px;
+}
+
+.float-marker-row td span {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+}
+
+.float-marker-row td span {
+    width: 20px;
+}
+
+[data-bs-theme="light"] .sign,
+[data-bs-theme="light"] .mantissa {
+    background-color: rgba(0, 0, 0, 0);
+}
+[data-bs-theme="light"] .exponent {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="dark"] .sign,
+[data-bs-theme="dark"] .mantissa {
+    background-color: rgba(255, 255, 255, 0);
+}
+[data-bs-theme="dark"] .exponent {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#string-output {
+    float: right;
+	font-weight: 700;
+	font-size: 1.5em;
+    margin-bottom: 0;
+	padding-top: 2px;
+}
+
+/* Small devices (tablets, @screen-sm-min and up) */
+@media (max-width: 767px) {
+    .float-output-row td, .float-marker-row td {
+        float: left;
+        width: 25%;
+        display: block;
+    }
+}
+
+/* Large devices only (large desktops, @screen-lg-min) */
+@media (min-width: 992px) { 
+    .float-output-row td span {
+        font-size: 14px;
+    }
+}

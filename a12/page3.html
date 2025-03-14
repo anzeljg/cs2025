@@ -298,6 +298,12 @@
         <h1 class="bd-title mb-0" id="content">Logic gates</h1>
         <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A1.2</span> Data representation and computer logic</h2>
         <p class="bd-lead"><span class="text-info">A1.2.3</span> Describe the purpose and use of logic gates.</p>
+		
+		<p align="center"><img src="img/transistor-88259_1920.jpg" class="img-fluid" /></p>
+		
+		<p align="justify">Binary systems are not just a mathematical abstraction, but are the foundation of digital electronics. Physically switching between two states is simpler and more reliable than between multiple states, which led to the use of the binary system. A bit (0 or 1) can be represented by any physical medium that switches between two states.</p>
+		
+		<p align="justify">Computing is based on the fact that we can represent and process numerical values ​​using physical systems that have two states, or the binary system.</p>
       </div>
      
       <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
@@ -325,6 +331,814 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
+<h2>Transistor</h2>
+
+<p align="justify">The basic building block of digital electronic circuits is the transistor. A <b>transistor</b> is an electronic switch that is controlled by an electrical signal &ndash; when a signal is applied to the input, the transistor allows or disables the flow of electricity through it. Before the invention of the transistor, a mechanical switch, an electrical relay, and a vacuum tube were used as switches. The advantages of the transistor are its small size, speed, quietness, low power consumption, and the ability to integrate a large number of transistors in a small space.</p>
+
+<p align="justify">A transistor is made of semiconductor materials (silicon, germanium) with additives (gallium, arsenic, indium, and other substances). Transistors are generally classified into two categories: bipolar junction transistor (BJT) and field effect transistor (FET).</p>
+
+<p align="justify">The concept of the field effect transistor was proposed in 1925 by Julius Edgar Lilienfeld. John Bardeen, Walter Brattain, and William Shockley invented the first working transistor at Bell Labs in 1947. Shockley introduced an improved bipolar junction transistor in 1948, which began production in the early 1950s, leading to the widespread use of transistors.</p>
+
+<p>
+<div id="carousel01" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carousel01" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carousel01" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carousel01" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carousel01" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/Bardeen_Shockley_Brattain_1948.jpg" class="d-block w-100" alt="Inventors of the first transistor">
+      <div class="carousel-caption d-none d-md-block text-light bg-dark opacity-75">
+        <p>Inventors of the first transistor.</p>
+      </div>
+	</div>
+    <div class="carousel-item">
+      <img src="img/replica-of-first-transistor.jpg" class="d-block w-100" alt="Replica of the first transistor">
+      <div class="carousel-caption d-none d-md-block text-light bg-dark opacity-75">
+        <p>Replica of the first transistor.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/electronics-953932.jpg" class="d-block w-100" alt="Testing the operation of a transistor">
+      <div class="carousel-caption d-none d-md-block text-light bg-dark opacity-75">
+        <p>Testing the operation of a transistor.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/transistors-218835.jpg" class="d-block w-100" alt="A multitude of transistors">
+      <div class="carousel-caption d-none d-md-block text-light bg-dark opacity-75">
+        <p>A multitude of transistors.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel01" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel01" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></p>
+
+<p align="justify">The MOSFET (metal-oxide-semiconductor field-effect transistor), also known as the MOS transistor, was invented by Mohamed Atalla and Dawon Kahng at Bell Labs in 1959. MOSFET transistors have become the most widely used electronic component in history due to their low power consumption.</p>
+
+<p align="center">
+  <img src="svg/transistor-physical.svg" class="color-invertible mx-3" />
+  <img src="svg/transistor-structural.svg" class="color-invertible mx-3" />
+  <img src="svg/transistor-symbolic.svg" class="color-invertible mx-3" />
+  <br /><small>From left to right: physical, structural and symbolic representation of a transistor (pnp-type).</small>  
+</p>
+
+<p align="justify">The major limitations of the early MOS transistors were speed and high sensitivity to static discharges. Today's MOS transistors have improved immunity to the described disturbances and improved speed and, most importantly, much lower power consumption for operation.</p>
+
+<p align="justify">If we combine two MOSFET transistors into a complementary pair (CMOS &ndash; Complementary MOS), we get significantly improved switching properties, especially extremely low current consumption. A complementary pair of MOS transistors is built from two transistors of different types (pnp and npn), whose channels are connected in series (see figure below) and are controlled in opposite directions.</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive MOS transistor</strong></p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/transistor-interactive.svg" class="color-invertible"></object>
+</p>
+<p align="justify">When the gate (G) is turned on, a conductive »channel« will be created under the insulation in the base (marked yellow in light mode or blue in dark mode). This will allow electric current to flow between the source (S) and drain (D) electrodes. The <i>p</i> and <i>n</i> symbols represent the silicon base with different types of impurities.</p>
+</div>
+</p>
+
+
+<h2>Truth table</h2>
+
+<p align="justify">Now that we have learned about the basic building blocks of digital circuits &ndash; transistors, which act as electronic switches &ndash; let’s look at how we can describe the operation of digital circuits. To do this, we use truth tables, which show us how the circuit responds to different combinations of input signals.</p>
+
+<p align="justify">A truth table is organized so that on the left side it contains all possible combinations of inputs to a logic circuit, on the right side it contains intermediate states, and finally all possible combinations of usually one, but also several outputs. It is sometimes called a truth table.</p>
+
+<p align="justify">Next, we will look at truth tables with one, two, and three inputs. We use truth tables with multiple inputs in the same way. So if we understand truth tables with one, two, or three inputs, we will also understand truth tables with multiple inputs. It is worth noting that inputs are usually denoted by the letters a, b, c, d ... or x, y, z, w
+... However, both lowercase and uppercase letters can be used. The output is often denoted as a function of the inputs, or by the letters f or q.</p>
+
+<p align="justify">Since each input can assume exactly two states, a circuit with one input will have exactly two different inputs (since 2<sup>1</sup> = 2) and corresponding outputs:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td class="bl">f(x)</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p align="justify">A two-input circuit will have exactly four different combinations of inputs (since 2<sup>2</sup> = 4) and a corresponding output for each of the input combinations:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">f(x, y)</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p align="justify">A three-input circuit will have exactly eight different combinations of inputs (since 2<sup>3</sup> = 8) and a corresponding output for each of the input combinations:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td>z</td>
+   <td class="bl">f(x, y, z)</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="accordion" id="accordion01">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01" aria-expanded="true" aria-controls="collapse01">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>All combinations of inputs</strong>
+      </button>
+    </h2>
+    <div id="collapse01" class="accordion-collapse collapse" data-bs-parent="#accordion01">
+      <div class="accordion-body">
+        <p align="justify">What is the easiest way to write down all combinations of inputs so that none of them are omitted or repeated? Let's look at this using the example of three input variables or three inputs.</p>
+		<p align="justify">To systematically write down all combinations of three inputs, we use their numerical values: we write down all binary numbers from 0 to 7 (a total of 2<sup>3</sup> = 8 numbers) with three bits.
+		<ul>
+		  <li>0 is written as 0 0 0</li>
+		  <li>1 is written as 0 0 1</li>
+		  <li>2 is written as 0 1 0</li>
+		  <li>3 is written as 0 1 1</li>
+		  <li>4 is written as 1 0 0</li>
+		  <li>5 is written as 1 0 1</li>
+		  <li>6 is written as 1 1 0</li>
+		  <li>7 is written as 1 1 1</li>
+		</ul>
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
+
+
+<h2>NOT logic gate</h2>
+
+<p align="justify">Logic gates are the basic building blocks of digital circuits that perform logical operations on binary values ​​(0 and 1). Let's start with the simplest logic gate, the NOT logic gate (inverter), which has one input and one output. Its job is to invert the input value &ndash; if the input is 0, the output will be 1, and vice versa.</p>
+
+<p align="justify">In logic circuits, we denote a NOT logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_NOT.svg" class="color-invertible mx-3" />
+<img src="svg/iec_NOT.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the NOT operation on input
+is denoted as: x', <u class="over-1">x</u> or ¬x, and the truth table of the NOT operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td class="bl">x'</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive NOT logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the NOT logic gate by turning the switch on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_NOT.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>Buffer logic gate</h2>
+
+<p align="justify">A buffer has one input and one output. The function of a buffer is to receive a value at the input and return the same, but amplified, value at the output. It can also be used to create delays in logic circuits. We will not use it in logic circuits.</p>
+
+<p align="justify">In logic circuits, we denote a buffer with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_Buffer.svg" class="color-invertible mx-3" />
+<img src="svg/iec_Buffer.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">The truth table of the Buffer looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td class="bl">x</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive Buffer</strong></p>
+<p align="justify">Try out the interactive animation of the Buffer by turning the switch on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_Buffer.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>AND logic gate</h2>
+
+<p align="justify">The AND logic gate (logical conjunction) has two inputs and one output. The AND logic gate returns value 1 at the output if both inputs have value 1.</p>
+
+<p align="justify">In logic circuits, we denote an AND logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_AND.svg" class="color-invertible mx-3" />
+<img src="svg/iec_AND.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the AND operation on inputs x and y is denoted as: x &middot; y or x Λ y, and the truth table of the AND operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">x &middot; y</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive AND logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the AND logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_AND.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>NAND logic gate</h2>
+
+<p align="justify">The NAND (NOT-AND) logic gate (negation of logical conjunction) has two inputs and one output. The NAND logic gate returns value 1 at the output if at least one of the inputs has value 0.</p>
+
+<p align="justify">In logic circuits, we denote an NAND logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_NAND.svg" class="color-invertible mx-3" />
+<img src="svg/iec_NAND.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the NAND operation on inputs x and y is denoted as: (x &middot; y)', <u class="over-1">x &middot; y</u>, <u class="over-2">x Λ y</u> or x &uarr; y, and the truth table of the NAND operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">(x &middot; y)'</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive NAND logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the NAND logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_NAND.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>OR logic gate</h2>
+
+<p align="justify">The OR logic gate (logical disjunction) has two inputs and one output. The OR logic gate returns value 1 at the output if at least one of the inputs has value 1.</p>
+
+<p align="justify">In logic circuits, we denote an OR logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_OR.svg" class="color-invertible mx-3" />
+<img src="svg/iec_OR.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the OR operation on inputs x and y is denoted as: x + y or x V y, and the truth table of the OR operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">x + y</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive OR logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the OR logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_OR.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>NOR logic gate</h2>
+
+<p align="justify">The NOR (NOT-OR) logic gate (negation of logical disjunction) has two inputs and one output. The NOR logic gate returns value 1 at the output if both inputs have value 0.</p>
+
+<p align="justify">In logic circuits, we denote an NOR logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_NOR.svg" class="color-invertible mx-3" />
+<img src="svg/iec_NOR.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the NOR operation on inputs x and y is denoted as: (x + y)', <u class="over-1">x + y</u>, <u class="over-2">x V y</u> or x &darr; y, and the truth table of the NOR operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">(x + y)'</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive NOR logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the NOR logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_NOR.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>XOR logic gate</h2>
+
+<p align="justify">The XOR (eXclusive OR) logic gate (negation of equivalence) has two inputs and one output. The XOR logic gate returns value 1 at the output if exactly one of the inputs has value 1.</p>
+
+<p align="justify">In logic circuits, we denote an XOR logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_XOR.svg" class="color-invertible mx-3" />
+<img src="svg/iec_XOR.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the XOR operation on inputs x and y is denoted as: x &oplus; y or x &nhArr; y, and the truth table of the XOR operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">x &oplus; y</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive XOR logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the XOR logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_XOR.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>XNOR logic gate</h2>
+
+<p align="justify">The XNOR (NOT-XOR) logic gate (equivalence) has two inputs and one output. The XNOR logic gate returns value 1 at the output if both inputs have the same value.</p>
+
+<p align="justify">In logic circuits, we denote an XNOR logic gate with the following symbols:</p>
+
+<p align="center">
+<img src="svg/ieee_XNOR.svg" class="color-invertible mx-3" />
+<img src="svg/iec_XNOR.svg" class="color-invertible mx-3" />
+</p>
+
+<p align="justify">In logical expressions, the XNOR operation on inputs x and y is denoted as: x &equiv; y or x &hArr; y, and the truth table of the XNOR operation looks like this:
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>x</td>
+   <td>y</td>
+   <td class="bl">x &equiv; y</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p>
+<div class="bd-callout bd-callout-primary">
+<p><i class="fa fa-microchip"></i> <strong>Interactive XNOR logic gate</strong></p>
+<p align="justify">Try out the interactive animation of the XNOR logic gate by turning the switches on or off.</p>
+<p align="center">
+  <!-- This has to be <object> and not <img> or the animation won't work -->
+  <object data="svg/interactive_XNOR.svg" class="color-invertible"></object>
+</p>
+</div>
+</p>
+
+
+<h2>Using logic gates</h2>
+
+<p align="justify">Several logic gates can be combined into an integrated circuit, which is a microcircuit consisting of a multitude of electronic elements connected to each other on a common substrate made of semiconductor material to form an electronic circuit. The circuit contains active elements (transistor, diode, etc.) as well as passive elements (resistor, capacitor, etc.).</p>
+
+<p align="justify">An integrated circuit built into a housing is called a <b>chip</b>. The word chip comes from American computer slang and means a silicon wafer.</p>
+
+<p align="justify">We will use chips from the 4000 family, which were produced by many companies in the past &ndash; chips from this family were first produced by RCA in 1968. The table below lists the chips that we will use:
+<table class="table table-striped">
+<tr>
+  <th width="10%">Identifier</th>
+  <th width="40%">Description</th>
+  <th width="50%">Datasheet</th>
+</tr>
+<tr>
+  <td>4001</td>
+  <td>Four 2-input NOR gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n57/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4001b.pdf">CD4001B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4001B.pdf">HEF4001B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14001b-d.pdf">MC14001B</a>
+  </td>
+</tr>
+<tr>
+  <td>4011</td>
+  <td>Four 2-input NAND gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n81/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4011b.pdf">CD4011B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4011B.pdf">HEF4011B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14001b-d.pdf">MC14011B</a>
+  </td>
+</tr>
+<tr>
+  <td>4049</td>
+  <td>Six NOT (inverter) gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n201/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4050b.pdf">CD4049UB</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4049B.pdf">HEF4049B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14049b-d.pdf">MC14049B</a>
+  </td>
+</tr>
+<tr>
+  <td>4070</td>
+  <td>Four 2-input XOR gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n243/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4070b.pdf">CD4070B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4070B.pdf">HEF4070B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14070b-d.pdf">MC14070B</a>
+  </td>
+</tr>
+<tr>
+  <td>4071</td>
+  <td>Four 2-input OR gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n245/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4071b.pdf">CD4071B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4071B.pdf">HEF4071B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14001b-d.pdf">MC14071B</a>
+  </td>
+</tr>
+<tr>
+  <td>4077</td>
+  <td>Four 2-input XNOR gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n243/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4070b.pdf">CD4077B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4077B.pdf">HEF4077B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14070b-d.pdf">MC14077B</a>
+  </td>
+</tr>
+<tr>
+  <td>4081</td>
+  <td>Four 2-input AND gates</td>
+  <td>
+    <a href="https://archive.org/details/bitsavers_rcadataBoook_74957274/page/n249/mode/2up">RCA</a>,
+    <a href="https://www.ti.com/lit/ds/symlink/cd4081b.pdf">CD4081B</a>,
+    <a href="https://assets.nexperia.com/documents/data-sheet/HEF4081B.pdf">HEF4081B</a>,
+    <a href="https://www.onsemi.com/pdf/datasheet/mc14001b-d.pdf">MC14081B</a>
+  </td>
+</tr>
+</table>
+</p>
+
+<p align="justify">First, we will only look at chips that contain the same logic gates. We will see how to connect the chips on a breadboard with wires to the buttons and a diode. With such a simple circuit, we can then test the operation of individual logic gates and see if it matches the theoretical knowledge we have acquired so far.</p>
+
+<div class="alert alert-secondary">
+  <ul class="nav nav-underline" id="chip-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="4001-tab" data-bs-toggle="tab" data-bs-target="#4001" type="button" role="tab" aria-controls="4001" aria-selected="true">4001</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4011-tab" data-bs-toggle="tab" data-bs-target="#4011" type="button" role="tab" aria-controls="4011" aria-selected="false" tabindex="-1">4011</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4049-tab" data-bs-toggle="tab" data-bs-target="#4049" type="button" role="tab" aria-controls="4049" aria-selected="false" tabindex="-1">4049</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4070-tab" data-bs-toggle="tab" data-bs-target="#4070" type="button" role="tab" aria-controls="4070" aria-selected="false" tabindex="-1">4070</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4071-tab" data-bs-toggle="tab" data-bs-target="#4071" type="button" role="tab" aria-controls="4071" aria-selected="false" tabindex="-1">4071</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4077-tab" data-bs-toggle="tab" data-bs-target="#4077" type="button" role="tab" aria-controls="4077" aria-selected="false" tabindex="-1">4077</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="4081-tab" data-bs-toggle="tab" data-bs-target="#4081" type="button" role="tab" aria-controls="4081" aria-selected="false" tabindex="-1">4081</button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3" id="video-content">
+    <div class="tab-pane fade show active" id="4001" role="tabpanel" aria-labelledby="4001-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4001_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4001_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4011" role="tabpanel" aria-labelledby="4011-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4011_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4011_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4049" role="tabpanel" aria-labelledby="4049-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4049_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4049_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4070" role="tabpanel" aria-labelledby="4070-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4070_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4070_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4071" role="tabpanel" aria-labelledby="4071-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4071_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4071_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4077" role="tabpanel" aria-labelledby="4077-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4077_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4077_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+    <div class="tab-pane fade" id="4081" role="tabpanel" aria-labelledby="4081-tab">
+	  <p align="center" class="bg-light-subtle">
+		<img src="fritzing/4081_sc.svg" class="color-invertible img-fluid my-3" />
+		<br />
+		<img src="fritzing/4081_bb.svg" class="img-fluid my-3" />
+	  </p>
+    </div>
+  </div>
+</div>
 <!-- Content end -->
       </div>
 
