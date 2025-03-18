@@ -13,6 +13,9 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/fontawesome.min.css" rel="stylesheet" />
 
+  <!-- jQuery TableSorter plugin -->
+  <link href="css/jquery.tablesorter.css" rel="stylesheet">
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="../logo/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -291,6 +294,12 @@
         <h1 class="bd-title mb-0" id="content">Revision tasks</h1>
         <h2 class="bd-subtitle mb-0" id="content"><span class="text-info">A3.1</span> Database fundamentals</h2>
         <p class="bd-lead"><span class="text-info">A3.1.1</span> Explain the features, benefits and limitations of a relational database.</p>
+
+		<p align="center"><img src="img/organization-1205171_1920.jpg" class="img-fluid" /></p>
+		
+		<p align="justify">In this unit, we will look at how database models have evolved in the past. Only with this knowledge can we fully understand and appreciate the usefulness of relational databases. Relational databases allow tables of data to be linked together using common fields. The relational data model is a very flexible model that is used by most modern databases.</p>
+		
+		<p align="justify">Despite the usefulness and flexibility of relational databases, they also have some weaknesses that some other database models aim to eliminate.</p>
       </div>
      
       <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
@@ -307,6 +316,7 @@
               <hr class="d-none d-md-block my-2 ms-2">
 			  <li><a href="concepts.html">Key concepts</a></li>
 			  <li><a href="tasks.html">Revision tasks</a></li>
+			  <li><a href="resources.html">Additional resources</a></li>
             </ul>
           </nav>
         </div>
@@ -314,6 +324,430 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
+<h2>What is a database?</h2>
+
+<p align="justify">The easiest way to understand a database is as a collection of related files. Imagine a file (either paper or digital) of sales orders in a shop. Then there's another file of products, containing stock records. To fulfil an order, you'd need to look up the product in the order file and then look up and adjust the stock levels for that particular product in the product file. A database and the software that controls the database, called a <b>database management system</b> (DBMS), helps with this kind of task.</p>
+
+<p align="justify">Most databases today are <b>relational</b> databases, named such because they deal with tables of data related by a common field. For example, »Product table« below shows the product table, and »Invoice table« shows the invoice table. As you can see, the relation between the two tables is based on the common field <code>product_code</code>. Any two tables can relate to each other simply by having a field in common.</p>
+
+<div>
+<b>Product table</b>
+<table id="sqlTable11" class="tablesorter table table-striped">
+  <thead>
+    <tr>
+      <th style="width:30%"><i>product_code</i></th>
+      <th style="width:25%">description</th>
+      <th style="width:25%">unit</th>
+      <th style="width:20%">price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A416</td>
+      <td>nails</td>
+      <td>box</td>
+      <td>2.58€</td>
+    </tr>
+    <tr>
+      <td>C923</td>
+      <td>drawing pins</td>
+      <td>box</td>
+      <td>1.97€</td>
+    </tr>
+    <tr>
+      <td>B587</td>
+      <td>screws</td>
+      <td>box</td>
+      <td>2.36€</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+<b>Invoice table</b>
+<table id="sqlTable12" class="tablesorter table table-striped w-75">
+  <thead>
+    <tr>
+      <th style="width:30%">invoice_code</th>
+      <th style="width:20%">invoice_line</th>
+      <th style="width:30%"><i>product_code</i></th>
+      <th style="width:20%">quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3676</td>
+      <td>1</td>
+      <td>A416</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>3676</td>
+      <td>2</td>
+      <td>C923</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Database terminology</h2>
+
+<p align="justify">Let's take a closer look at the previous two tables to see how they are organized:
+<ul align="justify">
+  <li>Each table consists of many <b>rows</b> and <b>columns</b>.</li>
+  <li>Each new row contains data about one single <b>entity</b> (such as one product or one order line). This is called a <b>record</b>. For example, the first row in »Product table« is a record; it describes the A416 product, which is a box of nails that costs 2.58 €. The terms row and record are interchangeable.</li>
+  <li>Each column (also called an <b>attribute</b>) contains one piece of data that relates to the record, called a <b>tuple</b>. Examples of attributes are the quantity of an item sold or the price of a product. An attribute, when referring to a database table, is called a <b>field</b>. For example, the data in the Description column in »Product table« are fields. The terms attribute and field are interchangeable.</li>
+</ul>
+</p>
+
+<p align="justify">With this structure, the database allows us to manage data using SQL. Structured query language (SQL) is a powerful way to search or modify records, which we will look at in more detail in one of the next units.</p>
+
+
+<h2>Exploring early database models</h2>
+
+<p align="justify">Before the advent of databases, the only way to store data was from unrelated files. Programmers had to go to great lengths to extract the data, and their programs had to perform complex parsing and relating.</p>
+
+<p align="justify">Languages such as Perl, with its powerful regular expressions ideal for processing text, have made the job a lot easier than before; however, accessing the data from files is still a challenging task. Without a standard way to access data, systems are more prone to errors, are slower to develop, and are more difficult to maintain.</p>
+
+<p align="justify"><b>Data redundancy</b> (where data is duplicated unnecessarily) and poor <b>data integrity</b> (where data is not changed in all locations, leading to wrong or outdated data being supplied) are frequent consequences of the file access method of data storage.<p>
+
+<p align="justify">For these reasons, <b>database management systems</b> (DBMSs) were developed to provide a standard and reliable way to access and update data. They provide an intermediary layer between the application and the data, and the programmer is able to concentrate on developing the application, rather than worrying about data access issues.</p>
+
+<p align="justify">A <b>database model</b> is a logical model concerned with how the data is represented. Instead of database designers worrying about the physical storage of data, the database model allows them to look at a higher, more conceptual level, reducing the gap between the real-world problem for which the application is being developed and the technical implementation.</p>
+
+<p align="justify">There are several data models. First, we will first look at the hierarchical and network models. Then we will look at the relational model, which is used by most modern database management systems.</p>
+
+
+<h2>Understanding the hierarchical database model</h2>
+
+<p align="justify">The earliest model was the <b>hierarchical database model</b>, resembling an upside-down tree. Files are related in a parent-child manner, with each parent capable of relating to more than one child, but each child only being related to one parent.</p>
+
+<p align="justify">Most of you will be familiar with this kind of structure &ndash; it’s the way most file systems work. There is usually a root, or top-level, directory that contains various other directories and files. Each subdirectory can then contain more files and directories, and so on. Each file or directory can only exist in one directory itself &ndash; it only has one parent.</p>
+
+<p align="justify">As you can see in the image below A1 is the root directory, and its children are B1 and B2. B1 is a parent to C1, C2, and C3, which in turn has children of its own.</p>
+
+<p align="center"><img src="img/db_hierarchical_model2.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">This model, although being a vast improvement on dealing with unrelated files, has some serious disadvantages. It represents one-to-many relationships well (one parent has many children; for example, one company branch has many employees), but it has problems with many-to-many relationships. Relationships such as that between a product file and an orders file are difficult to implement in a hierarchical model. Specifically, an order can contain many products, and a product can appear in many orders.</p>
+
+<p align="justify">Also, the hierarchical model is not flexible because adding new relationships can result in wholesale changes to the existing structure, which in turn means all existing applications need to change as well. This is not fun when someone has forgotten a table and wants it added to the system shortly before the project is due to launch! And developing the applications is complex because the programmer needs to know the data structure well in order to traverse the model to access the needed data. As you’ve seen in the earlier chapters, when accessing data from two related tables, you only need to know the fields you require from those two tables. In the hierarchical model, you’d need to know the entire chain between the two. For example, to relate data from A1 and D4, you’d need to take the route: A1, B1, C3 and D4.</p>
+
+
+<h2>Understanding the network database model</h2>
+
+<p align="justify">The network database model was a progression from the hierarchical database model and was designed to solve some of that model's problems, specifically the lack of flexibility. Instead of only allowing each child to have one parent, this model allows each child to have multiple parents (it calls the children members and the parents owners). It addresses the need to model more complex relationships such as the orders/parts many-to-many relationship mentioned in the hierarchical article. As you can see in the figure below, A1 has two members, B1 and B2. B1. is the owner of C1, C2, C3 and C4. However, in this model, C4 has two owners, B1 and B2.</p>
+
+<p align="center"><img src="img/db_network_model.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">Of course, this model has its problems, or everyone would still be using it. It is more difficult to implement and maintain, and, although more flexible than the hierarchical model, it still has flexibility problems, Not all relations can be satisfied by assigning another owner, and the programmer still has to understand the data structure well in order to make the model efficient.</p>
+
+
+<h2>Understanding the relational database model</h2>
+
+<p align="justify">The relational database model was a huge leap forward from the network database model. Instead of relying on a parent-child or owner-member relationship, the relational model allows any file to be related to any other by means of a common field. Suddenly, the complexity of the design was greatly reduced because changes could be made to the database schema without affecting the system's ability to access data. And because access was not by means of paths to and from files, but from a direct relationship between files, new relations between these files could easily be added.</p>
+
+<p align="justify"><img src="img/codd.jpg" class="me-3 float-start" />In 1970, when <b>Edgar Frank Codd</b> developed the model, it was thought to be impractical. The increased ease of use comes at a large performance penalty, and the hardware in those days was not able to implement the model. Since then, of course, hardware has taken huge strides to where today, even the simplest computers can run sophisticated relational database management systems.</p>
+
+<p align="justify">Relational databases go hand-in-hand with the development of SQL. The simplicity of SQL &ndash; where even a novice can learn to perform basic queries in a short period of time &ndash; is a large part of the reason for the popularity of the relational model.</p>
+
+<p align="justify">The two tables below relate to each other through the <code>product_code field</code>. Any two tables can relate to each other simply by creating a field they have in common.</p>
+
+<div>
+<b>Product table</b>
+<table id="sqlTable21" class="tablesorter table table-striped">
+  <thead>
+    <tr>
+      <th style="width:30%"><i>product_code</i></th>
+      <th style="width:25%">description</th>
+      <th style="width:25%">unit</th>
+      <th style="width:20%">price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A416</td>
+      <td>nails</td>
+      <td>box</td>
+      <td>2.58€</td>
+    </tr>
+    <tr>
+      <td>C923</td>
+      <td>drawing pins</td>
+      <td>box</td>
+      <td>1.97€</td>
+    </tr>
+    <tr>
+      <td>B587</td>
+      <td>screws</td>
+      <td>box</td>
+      <td>2.36€</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+<b>Invoice table</b>
+<table id="sqlTable22" class="tablesorter table table-striped w-75">
+  <thead>
+    <tr>
+      <th style="width:30%">invoice_code</th>
+      <th style="width:20%">invoice_line</th>
+      <th style="width:30%"><i>product_code</i></th>
+      <th style="width:20%">quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3676</td>
+      <td>1</td>
+      <td>A416</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>3676</td>
+      <td>2</td>
+      <td>C923</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Relational databases &ndash; basic terms</h3>
+
+<p align="justify">The relational database model uses certain terms to describe its components.</p>
+
+<p align="justify"><b>Data</b> are the values kept in the database. On their own, the data means very little. <code>CA 684-213</code> is an example of data in a DMV (Division of Motor Vehicles) database. <b>Information</b> is processed data. For example, <code>CA 684-213</code> is the car registration number of a car belonging to Lyndon Manson, in a DMV database.</p>
+
+<p align="justify">A <b>database</b> is a collection of <b>tables</b>, also called <i>entities</i>. Each table is made up of <b>records</b> (the horizontal rows in the table, also called <i>tuples</i>). Each record should be unique, and can be stored in any order in the table. A <b>view</b> is a virtual table made up of a subset of the actual tables.</p>
+
+<p align="justify">Each record is made up of <b>fields</b> (which are the vertical columns of the table, also called <i>attributes</i>). Basically, a record is one fact (for example, one customer or one sale). These fields can be of various <b>types</b>. Generally types fall into three kinds: character, numeric, and date. For example, a customer name is a character field, a customer's birthday is a date field, and a customer's number of children is a numeric field.</p>
+
+<p align="justify">The range of allowed values for a field is called the <b>domain</b> (also called a <i>field specification</i>). For example, a credit card field may be limited to only the values <code>Mastercard</code>, <code>Visa</code> and <code>Amex</code>. A field is said to contain a <b>null</b> value when it contains nothing at all. Null fields can create complexities in calculations and have consequences for data accuracy. For this reason, many fields are specifically set not to contain null values.</p>
+
+<p align="justify">A <b>key</b> accesses specific records in a table. An <b>index</b> is a mechanism to improve the performance of a database. Indexes are often confused with keys. Indexes are, strictly speaking, part of the physical structure, and keys are part of the logical structure. However, you'll often see the terms used interchangeably.</p>
+
+<p align="justify">A <b>one-to-one</b> (1:1) relationship is where for each instance of the first table in a relationship, only one instance of the second table exists, An example of this would be a case where a person having a social security number (SSN). Each person can only have one social security number, and each social security number only belongs to one person.</p>
+
+<p align="center"><img src="img/db_one-to-one.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">A <b>one-to-many</b> (1:N) relationship is where for each instance of the first table in a relationship, many instances of the second table exist. This is a common kind of relationship. An example is the relationship between a sculptor and their sculptures. Each sculptor may have created many sculptures, but each sculpture has been created by only one sculptor.</p>
+
+<p align="center"><img src="img/db_one-to-many.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">A <b>many-to-many</b> (M:N) relationship occurs where, for each instance of the first table, there are many instances of the second table, and for each instance of the second table, there are many instances of the first. For example, a student can have many teachers, and a teacher can have many students.</p>
+
+<p align="center"><img src="img/db_many-to-many.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">A <b>mandatory</b> relationship exists where for each instance of the first table in a relationship, one or more instances of the second <i>must</i> exist. For example, for a music group to exist, there must exist at least one musician in that group. An <b>optional</b> relationship is where for each instance of the first table in a relationship, there <i>may</i> exist instances of the second. For example, if an author can be listed in the database without having written a book (in other words, a prospective author), that relationship is optional. The reverse isn't necessarily true though. For example, for a book to be listed, it must have an author.</p>
+
+<p align="justify"><b>Data integrity</b> refers to the condition where data is accurate, valid, and consistent. An example of poor integrity would be if a customer telephone number is stored differently in two different locations. Another is where a course record contains a reference to a lecturer who is no longer present at the school. <b>Database normalization</b> is a technique that assists you to minimize the risk of these sorts of problems.</p>
+
+<h3>Relational databases &ndash; table keys</h3>
+
+<p align="justify">A <b>key</b>, or index, as the term itself indicates, unlocks access to the tables. If you know the key, you know how to identify specific records and the relationships between the tables. Each key consists of one or more fields, or field prefix. The order of columns in an index is significant. Each key has a name.</p>
+
+<p align="justify">A <b>candidate key</b> is a field, or combination of fields, that uniquely identifies a record. It cannot contain a null value, and its value must be unique. (With duplicates, you would no longer be identifying a unique record).</p>
+
+<p align="justify">A <b>primary key</b> (PK) is a candidate key that has been designated to identify unique records in the table throughout the database structure.</p>
+
+<p align="justify">A <b>surrogate key</b> is a primary key that contains unique values automatically generated by the database system &ndash; usually, integer numbers. A surrogate key has no meaning, except uniquely identifying a record. This is the most common type of primary key.</p>
+
+<p align="justify">For example, see the following table:</p>
+
+<div>
+<b>Customer table</b>
+<table id="sqlTable3" class="tablesorter table table-striped w-75">
+  <thead>
+    <tr>
+      <th style="width:20%">customer_code</th>
+      <th style="width:25%">firstname</th>
+      <th style="width:25%">lastname</th>
+      <th style="width:30%">telephone_number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ariane</td>
+      <td>Edison</td>
+      <td>448-2143</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Georgei</td>
+      <td>Edison</td>
+      <td>448-2142</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Abbas</td>
+      <td>Edison</td>
+      <td>9231-5312</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p align="justify">At first glance, there are two possible candidate keys for this table. Either <code>customer_code</code> or a combination of <code>firstname</code>, <code>lastname</code> and <code>telephone_number</code> would suffice. It is always better to choose the candidate key with the least number of fields for the primary key, so you would choose <code>customer_code</code> in this example (note that it is a surrogate key). Upon reflection, there is also the possibility of the second combination not being unique. The combination of <code>firstname</code>, <code>lastname</code> and <code>telephone_number</code> could in theory be duplicated, such as where a father has a son of the same name who is contactable at the same telephone number. This system would have to expressly exclude this possibility for these three fields to be considered for the status of primary key.</p>
+
+<p align="justify">There may be many Ariane Edisons, but you avoid confusion by assigning each a unique number. Once a primary key has been created, the remaining candidates are labeled as alternate keys.</p>
+
+<h3>Relational databases &ndash; foreign keys</h3>
+
+<p align="justify">You already know that a relationship between two tables is created by assigning a common field to the two tables. This common field must be a primary key to one table. Consider a relationship between a customer table and a sale table. The relationship is not much good if instead of using the primary key, <code>customer_code</code>, in the sale table, you use another field that is not unique, such as the customer's first name. You would be unlikely to know for sure which customer made the sale in that case. So, in the table below, <code>customer_code</code> is called the <code>foreign_key</code> in the sale table; in other words, it is the primary key in a foreign table.</p>
+
+<p align="center"><img src="img/db_foreign_key.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">Foreign keys allow for something called <b>referential integrity</b>. What this means is that if a foreign key contains a value, this value refers to an existing record in the related table. For example, take a look at the tables below:</p>
+
+<p>
+<div class="row">
+  <div class="col-md-6">
+	<b>Lecturer table</b>
+	<table id="sqlTable4" class="tablesorter table table-striped">
+	  <thead>
+		<tr>
+		  <th style="width:20%"><i>code</i></th>
+		  <th style="width:40%">firstname</th>
+		  <th style="width:40%">lastname</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>1</td>
+		  <td>Anne</td>
+		  <td>Cohen</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>Leonard</td>
+		  <td>Clark</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>Vusi</td>
+		  <td>Cave</td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
+  <div class="col-md-6">
+	<b>Course table</b>
+	<table id="sqlTable5" class="tablesorter table table-striped">
+	  <thead>
+		<tr>
+		  <th style="width:60%">course_title</th>
+		  <th style="width:40%"><i>lecturer_code</i></th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>Introduction to Programming</td>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>Information Systems</td>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>Systems Software</td>
+		  <td>3</td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
+</div>
+</p>
+
+<p align="justify">Referential integrity exists here, as all the lecturers in the course table exist in the <i>lecturer</i> table. However, let's assume Anne Cohen leaves the institution, and you remove her from the lecturer table. In a situation where referential integrity is not enforced, she would be removed from the lecturer table, but not from the course table, as shown below:</p>
+
+<p>
+<div class="row">
+  <div class="col-md-6">
+	<b>Lecturer table</b>
+	<table id="sqlTable6" class="tablesorter table table-striped">
+	  <thead>
+		<tr>
+		  <th style="width:20%"><i>code</i></th>
+		  <th style="width:40%">firstname</th>
+		  <th style="width:40%">lastname</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>2</td>
+		  <td>Leonard</td>
+		  <td>Clark</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>Vusi</td>
+		  <td>Cave</td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
+  <div class="col-md-6">
+	<b>Course table</b>
+	<table id="sqlTable7" class="tablesorter table table-striped">
+	  <thead>
+		<tr>
+		  <th style="width:60%">course_title</th>
+		  <th style="width:40%"><i>lecturer_code</i></th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>Introduction to Programming</td>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>Information Systems</td>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>Systems Software</td>
+		  <td>3</td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
+</div>
+</p>
+
+<p align="justify">Now, when you look up who lectures »Introduction to Programming«, you are sent to a non-existent record. This is called poor data intregrity.</p>
+
+<p align="justify">Foreign keys also allow cascading deletes and updates. For example, if Anne Cohen leaves, taking the »Introduction to Programming« Course with her, all trace of her can be removed from both the <i>lecturer</i> and <i>course</i> table using one statement. The delete cascades through the relevant tables, removing all relevant records.</p>
+
+<p align="justify">Foreign keys can also contain <code>null</code> values, indicating that no relationship exists.</p>
+
+
+<h2>ACID &ndash; concurrency control with transactions</h2>
+
+<p align="justify">atabase requests happen in linear fashion, one after another. When many users are accessing a database, or one user has a related set of requests to run, it becomes important to ensure that the results remain consistent. To achieve this, you use <b>transactions</b>, which are groups of database requests that are processed as a whole. Put another way, they are logical units of work.</p>
+
+<p align="justify">To ensure data integrity, transactions need to adhere to four conditions: <b>atomicity</b>, <b>consistency</b>, <b>isolation</b> and <b>durability</b> (ACID).</p>
+
+<h3>Atomicity</h3>
+
+<p align="justify"><i>Atomicity</i> means the entire transaction must complete. If this is not the case, the entire transaction is aborted. This ensures that the database is never left with partially completed transactions, which would lead to data integrity issues. For example, if money is debited from one bank account but an error occurs before it can be credited to another account, the entire transaction must fail. The money cannot be lost or taken from one account without being successfully deposited into the other.</p>
+
+<h3>Consistency</h3>
+
+<p align="justify"><i>Consistency</i> ensures that data adheres to predefined rules or constraints. For example, a rule might state that each invoice in the invoices table must be linked to a customer in the customers table. During a transaction, these rules can be temporarily violated &ndash; such as inserting an invoice before adding the related customer &ndash; but only within the transaction itself. These temporary violations are not visible outside the transaction and are always resolved before the transaction is finalized.</p>
+
+<h3>Isolation</h3>
+
+<p align="justify"><i>Isolation</i> ensures that data being used by one transaction is inaccessible to other transactions until the first transaction is complete. For example, if two people deposit 100€ each into an account with a balance of 900€, the first transaction must update the balance to 1,000€, and the second must then update it to 1,100€. If the second transaction reads the 900€ balance before the first transaction finishes, both transactions will appear successful, but 100€ will be lost. The second transaction must wait until the first completes to access the correct balance.</p>
+
+<h3>Durability</h3>
+
+<p align="justify"><i>Durability</i> guarantees that once a transaction is committed, its effects are permanent, even in the event of a system failure. While a transaction is in progress, its changes are not yet permanent. If the database crashes before the transaction is committed, the system can be restored to a consistent state using backups, which reflect the state before the transaction started. A committed transaction cannot be undone by a failure.</p>
 <!-- Content end -->
       </div>
 
@@ -368,6 +802,26 @@
 
 
 <script src="../js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery & jQuery UI -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<!-- jQuery TableSorter plugin -->
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script>
+$(document).ready(function() { 
+	$("#sqlTable11").tablesorter();
+	$("#sqlTable12").tablesorter();
+	$("#sqlTable21").tablesorter();
+	$("#sqlTable22").tablesorter();
+	$("#sqlTable3").tablesorter();
+	$("#sqlTable4").tablesorter();
+	$("#sqlTable5").tablesorter();
+	$("#sqlTable6").tablesorter();
+	$("#sqlTable7").tablesorter();
+}); 
+</script>
 
 <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 

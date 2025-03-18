@@ -318,6 +318,7 @@
               <hr class="d-none d-md-block my-2 ms-2">
 			  <li><a href="concepts.html">Key concepts</a></li>
 			  <li><a href="tasks.html">Revision tasks</a></li>
+			  <li><a href="resources.html">Additional resources</a></li>
             </ul>
           </nav>
         </div>
@@ -325,6 +326,252 @@
       
       <div class="bd-content ps-lg-2">
 <!-- Content start -->
+<h2>Logical expressions</h2>
+
+<p align="justify">An expression is a statement that can only be true (1) or false (0). In computer science and mathematics, statements are usually denoted by letters. Let's look at an example:
+<ul align="justify">
+  <li><b>W</b>: Mark is working.</li>
+  <li><b>H</b>: Mark is hungry.</li>
+  <li><b>S</b>: It is sunny.</li>
+  <li><b>T</b>: Mark is tired.</li>
+</ul>
+</p>
+
+<p align="center"><img src="img/construction-site-2630480_1280.jpg" class="img-fluid w-75" /></p>
+
+<p align="justify">From these basic statements, we can use logical operations (AND, OR, NOT) to construct more complex statements. For example:</p>
+
+<p align="justify"><i>Mark is tired (T) if
+<ul align="justify">
+  <li>he is working and hungry (W AND H),</li>
+  <li>he is working and it is not sunny (W AND NOT S),</li>
+  <li>he is not working and not hungry (NOT W AND NOT H).</li>
+</ul>
+</i>
+</p>
+
+<p align="justify">The above compound statement can also be written as a logical expression:<br>
+<center>T = W &middot; H + W &middot; S' + W' &middot; H'</center></p>
+
+<p align="justify">A logical expression can be represented by a regularity table, where the basic variables are listed on the left, any intermediate expressions in the middle, and the final result on the right. For simple cases, it is sufficient to only display the input variables and the final result.</p>
+
+<p>
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>W</td>
+   <td>H</td>
+   <td>S</td>
+   <td class="bl" colspan="3">W &middot; H + W &middot; S' + W' &middot; H'</td>
+   <td class="bl">T = f(W, H, S)</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p align="justify">Digital circuit design often begins with a truth table that defines the function of a logic circuit &ndash; in other words, what the circuit is supposed to do. To illustrate, let’s look at a real-world example.</p>
+
+<p align="justify">Let’s say we need to design a flame detection circuit for a toxic waste incinerator. The intense heat of the fire is intended to neutralize the toxicity of the waste that is fed into the incinerator. Combustion-based techniques are commonly used to neutralize medical waste that may be contaminated with deadly viruses or bacteria:</p>
+
+<p align="center"><img src="img/toxic-incinerator-example1.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">As long as the flame is maintained in the incinerator, toxic waste can be safely injected into it, and the flame or fire neutralizes it. If the flame were to go out, then it would not be safe to inject toxic waste into the combustion chamber, as the exhaust gases would come out unneutralized, posing a health hazard to anyone in the immediate vicinity of the exhaust gases.</p>
+
+<p align="justify">What is needed is a reliable way to detect the presence of a flame and only allow the injection of toxic waste if the flame detection system »proves« that there is a flame in the combustion chamber.</p>
+
+<p align="justify">There are several different technologies that can be used to detect whether there is a flame in the combustion chamber: optical sensors (detecting light), thermal sensors (detecting high temperatures), and electrical conductivity sensors (detecting ionized particles in the path of the flame). Each technology has its advantages and disadvantages, of course.</p>
+
+<p align="justify">We decided that due to the high level of danger associated with the possible passage of non-neutralized toxic waste through the exhaust of this incinerator, the flame detection system would be redundant (it would contain multiple sensors) so that the failure of a single sensor would not lead to the release of toxic substances from the exhaust.</p>
+
+<p align="center"><img src="img/toxic-incinerator-example2.png" class="img-fluid color-invertible" /></p>
+
+<p align="justify">First, we need to design a logic system that will take care of opening and closing the toxic waste inlet valve. If there is a flame in the incinerator, then the system should open the valve, otherwise the system should close the valve.</p>
+
+<p align="justify">We also need to decide whether the system should open the valve <b>if any of the sensors detects a flame</b> or not? Probably not, because in this case we would eliminate the redundancy of the system.</p>
+
+<p align="justify">If any of the sensors were to fail, falsely indicating the presence of a flame when there is none, the logic system based on the principle of »any of the three sensors detecting a flame« would give a false output and open the toxic waste inlet valve, which would then flow into the incinerator chamber unneutralized. This is the same as if we had a system with only one sensor that failed.</p>
+
+<p align="justify">A much better solution is to design the valve so that it opens <b>if and only if all three sensors detect a flame</b>. This way, no single failed sensor that falsely detects a flame can hold the valve open; instead, we require that all three sensors must fail in the same way &ndash; a highly unlikely scenario &ndash; for this dangerous condition to occur.</p>
+
+<p align="justify">In this case, the logic circuit's truth table would look like this, where output = 0 means »close valve« and output = 1 means »open valve«:</p>
+
+<p>
+<center>
+<table class="truth-table">
+ <tr align="center" class="bb">
+   <td>A</td>
+   <td>B</td>
+   <td>C</td>
+   <td class="bl">output</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>0</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>0</td>
+   <td>1</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>0</td>
+   <td class="bl">0</td>
+ </tr>
+ <tr align="center">
+   <td>1</td>
+   <td>1</td>
+   <td>1</td>
+   <td class="bl">1</td>
+ </tr>
+</table>
+</center>
+</p>
+
+<p align="justify">Looking at the truth table, we can quickly see that the logic circuit we need can be constructed using a three-input AND gate, with one sensor connected to each input. The output of the logic circuit will only turn on the toxic waste valve if all three sensors detect a flame in the incinerator.</p>
+
+<p align="center">f(A, B, C) = A &middot; B &middot; C</p>
+
+<p class="color-invertible" style="width:100%; height:171px; background:transparent url('svg/bg-3sensors.svg') 10% 50% no-repeat;">
+  <logic-editor mode="tryout">
+    <script type="application/json">
+      { // JSON5
+        v: 6,
+		opts: {zoom: 88},
+        components: {
+          in0: {type: 'in', pos: [50, 35], id: 0, name: 'A'},
+          in1: {type: 'in', pos: [50, 95], id: 1, name: 'B'},
+          out0: {type: 'out', pos: [270, 95], id: 5, name: 'output'},
+          in2: {type: 'in', pos: [50, 155], id: 10, name: 'C'},
+          and0: {type: 'and', pos: [160, 95], in: '14-16', out: 17, bits: 3},
+        },
+        wires: [[17, 5], [1, 15], [0, 14], [10, 16]]
+      }
+    </script>
+  </logic-editor>
+</p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
+
+<p align="justify"></p>
 <!-- Content end -->
       </div>
 
@@ -417,6 +664,9 @@ $(document).ready(function() {
 	});
 });
 </script>
+
+<!-- Logic Circuit Simulator -->
+<script src="https://anzeljg.github.io/cs2027/js/logiga/bundle.js" type="module"></script>
 
 <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 

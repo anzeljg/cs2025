@@ -16,7 +16,7 @@
   <!-- jQuery UI -->
   <link href="../css/jquery-ui.css" rel="stylesheet">
 
-  <!-- Color Mixers CMYK and RGB -->
+  <!-- Colour Mixers CMYK and RGB -->
   <link href="css/color-mixer.css" rel="stylesheet">
 
   <!-- JSXGraph - Dynamic Mathematics with JavaScript -->
@@ -32,10 +32,10 @@
   <link rel="apple-touch-icon" href="../logo/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="../logo/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="../logo/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="mask-icon" href="../logo/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="mask-icon" href="../logo/safari-pinned-tab.svg" colour="#712cf9">
   <link rel="icon" href="../logo/favicon.ico">
 
-  <meta name="theme-color" content="#014a8c">
+  <meta name="theme-colour" content="#014a8c">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
@@ -83,7 +83,7 @@
     <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
       <div class="bd-navbar-toggle">
         <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle textbook navigation">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColour" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
           </svg>
           <span class="d-none fs-6 pe-1">Browse</span>
@@ -382,6 +382,7 @@
               <hr class="d-none d-md-block my-2 ms-2">
 			  <li><a href="concepts.html">Key concepts</a></li>
 			  <li><a href="tasks.html">Revision tasks</a></li>
+			  <li><a href="resources.html">Additional resources</a></li>
             </ul>
           </nav>
         </div>
@@ -1125,8 +1126,8 @@
         <p align="justify">There's a very good reason that we mix three primary colours to specify the colour of a pixel. The human eye has millions of light sensors in it, and the ones that detect colour are called »cones«. There are three different kinds of cones, which detect red, blue, and green light respectively. Colours are perceived by the amount of red, blue, and green light in them. Computer screen pixels take advantage of this by releasing the amounts of red, blue, and green light that will be perceived as the desired colour by your eyes. So when you see »purple«, it's really the red and blue cones in your eyes being stimulated, and your brain converts that to a perceived colour. Scientists are still working out exactly how we perceive colour, but the representations used on computers seem to be good enough give the impression of looking at real images.</p>
 		<p align="center"><img src="img/pixels-on-screens.jpg" class="img-fluid" /></p>
 		<p align="justify">For more information about RGB displays, see <a href="https://en.wikipedia.org/wiki/Rgb" target="_blank">RGB on Wikipedia</a>; for more information about the eye sensing the three colours, see <a href="https://en.wikipedia.org/wiki/Cone_cell" target="_blank">Cone cell</a> and <a href="https://en.wikipedia.org/wiki/Trichromacy" target="_blank">trichromacy</a> on Wikipedia.</p>
-		<p align="justify">When printing we can have different saturations of the primary colors and thus display different shades of the primary colors. This is achieved by <a href="https://en.wikipedia.org/wiki/Halftone" target="_blank">halftone</a> technique, that is printing different sizes of dots in the primary colors, which can also be spaced apart. From a sufficiently large distance, the human eye perceives the pattern of dots of the primary colors as a shade of a certain color. So if we print the color magenta with a 20% halftone, the eye will perceive small dots of the color magenta on a large white surface of a sheet of paper as »pink« (or a less saturated color magenta).</p>
-		<p align="justify">The image shows enlargements of different patterns of dots of different sizes of the primary colors, which the human eye perceives from a sufficiently large distance as different colors or different shades.</p>
+		<p align="justify">When printing we can have different saturations of the primary colours and thus display different shades of the primary colours. This is achieved by <a href="https://en.wikipedia.org/wiki/Halftone" target="_blank">halftone</a> technique, that is printing different sizes of dots in the primary colours, which can also be spaced apart. From a sufficiently large distance, the human eye perceives the pattern of dots of the primary colours as a shade of a certain colour. So if we print the colour magenta with a 20% halftone, the eye will perceive small dots of the colour magenta on a large white surface of a sheet of paper as »pink« (or a less saturated colour magenta).</p>
+		<p align="justify">The image shows enlargements of different patterns of dots of different sizes of the primary colours, which the human eye perceives from a sufficiently large distance as different colours or different shades.</p>
 		<p align="center"><img src="img/pixels-on-prints.png" class="img-fluid" /></p>
       </div>
     </div>
@@ -1184,7 +1185,7 @@
 
 <p align="justify">This is the same as 2<sup>24</sup>.</p>
 
-<p align="justify">Because 24 bits are required, this representation is called <b>24 bit colour</b>. 24 bit colour is sometimes referred to in settings as »True Color« (because it is more accurate than the human eye can see). On Apple systems, it is called »Millions of colours«.</p>
+<p align="justify">Because 24 bits are required, this representation is called <b>24 bit colour</b>. 24 bit colour is sometimes referred to in settings as »True Colour« (because it is more accurate than the human eye can see). On Apple systems, it is called »Millions of colours«.</p>
 
 <h3>How do we use bits to represent the colour?</h3>
 
@@ -1258,7 +1259,7 @@
 		</ul>
 		</p>
         <p align="justify">Which gives <code>#91327B</code>.</p>
-        <p align="justify">Understanding how these hexadecimal colour codes are derived also allows you to change them slightly without having to refer back to the colour table, when the colour isn’t exactly the one you want. Remember that in the 24 bit color code, the first 8 bits specify the amount of red (so this is the first 2 digits of the hexadecimal code), the next 8 bits specify the amount of green (the next 2 digits of the hexadecimal code), and the last 8 bits specify the amount of blue (the last 2 digits of the hexadecimal code). To increase the amount of any one of these colours, you can change the appropriate hexadecimal characters.</p>
+        <p align="justify">Understanding how these hexadecimal colour codes are derived also allows you to change them slightly without having to refer back to the colour table, when the colour isn’t exactly the one you want. Remember that in the 24 bit colour code, the first 8 bits specify the amount of red (so this is the first 2 digits of the hexadecimal code), the next 8 bits specify the amount of green (the next 2 digits of the hexadecimal code), and the last 8 bits specify the amount of blue (the last 2 digits of the hexadecimal code). To increase the amount of any one of these colours, you can change the appropriate hexadecimal characters.</p>
         <p align="justify">For example, <code>#000000</code> has zero for red, green and blue, so setting a higher value to the middle two digits (such as <code>#004300</code>) will add some green to the colour.</p>
         <p align="justify">You can use this HTML page to experiment with hexadecimal colours. Just enter a colour in the space below to change the background colour:</p>
         <p>
@@ -1266,11 +1267,11 @@
 		  <div class="col-sm-2 mb-3">
 		    <div class="input-group">
               <span class="input-group-text" id="hash-addon">#</span>
-              <input type="text" size="6" id="hexcolor" class="form-control" placeholder="FFFFFF" aria-label="Background color" aria-describedby="hash-addon">
+              <input type="text" size="6" id="hexcolour" class="form-control" placeholder="FFFFFF" aria-label="Background colour" aria-describedby="hash-addon">
 			</div>
           </div>
 		  <div class="col-sm-4 mb-3">
-		    <button type="submit" id="submit" class="btn btn-success"><span class="fa fa-paint-brush"></span> Recolor</button>
+		    <button type="submit" id="submit" class="btn btn-success"><span class="fa fa-paint-brush"></span> Recolour</button>
 		    <button type="cancel" id="reset" class="btn btn-success">Cancel</button>
 		  </div>
 		  <div class="col-sm-6 mb-3"></div>
@@ -1585,7 +1586,7 @@ file size = v<sub>b</sub> &middot; t = &nu; &middot; &fnof;<sub>&nu;</sub> &midd
 <div class="bd-callout bd-callout-primary">
 <p><i class="fa fa-music"></i> <strong>Interactive keyboard</strong></p>
 	<div class="keyboard-options">
-	  <form class="form-inline">
+	  <form>
 	  <table>
 	  <tr>
         <td class="pe-2">		
@@ -1658,7 +1659,7 @@ file size = v<sub>b</sub> &middot; t = &nu; &middot; &fnof;<sub>&nu;</sub> &midd
 </p>
 
 <p>
-<textarea id="midi-messages" style="height:11em">
+<textarea id="midi-messages" class="form-control" rows="7">
 192 0
 </textarea>
 <p>
@@ -1693,19 +1694,57 @@ file size = v<sub>b</sub> &middot; t = &nu; &middot; &fnof;<sub>&nu;</sub> &midd
 
 		  <div class="tab-content mt-3" id="video-content">
 			<div class="tab-pane fade show active" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-			  <p>Messages</p>
+			  <p align="justify">MIDI messages are sent as a time sequence of one or more bytes. The first byte is a control byte, followed by several data bytes. The control byte specifies the type of message, and the number of data bytes depends on the type of message. For a control byte, the value of the most significant bit (the leftmost bit) is set to 1, and for data bytes, it is set to 0.</p>
+			  <p align="justify">Except for some system MIDI messages, the control byte contains the MIDI channel number. There are 16 possible MIDI channels, numbered 0 through 15. In practice, musicians and software count MIDI channels from 1 through 16, so 1 must be subtracted from the channel number when creating a message (channel »1« is coded as »0« etc.).</p>
+			  <p align="justify">The main MIDI messages are <i>NoteOn</i> and <i>NoteOff</i>. When a synthesizer receives a <i>NoteOn</i> message, it begins playing a note of the correct pitch and volume. When the synthesizer receives a <i>NoteOff</i> message, it stops playing the note.</p>
+			  <p align="justify">The pitch value is determined by the frequency of the note to be played. The value can be from 0 to 127, with the note C<sub>4</sub> (or <i>Middle C</i>) having a value of 72:</p>
+			  <p align="center">
+			    <img src="img/midi-note.png" class="color-invertible mb-3"><br />
+				<audio controls>
+				  <source src="snd/midi-note.ogg" type="audio/ogg">
+				  <source src="snd/midi-note.mp3" type="audio/mpeg">
+				</audio>
+			  </p>
+			  <p align="justify">The value is represented in half steps, so C#<sub>4</sub> has a value of 73, D<sub>4</sub> has a value of 74, and so on.</p>
 			</div>
 			<div class="tab-pane fade" id="chords" role="tabpanel" aria-labelledby="chords-tab">
-			  <p>Chords</p>
+			  <p align="justify">When you send a <i>NoteOn</i> message to the synthesizer, it will start playing a note. In the meantime, you can send other <i>NoteOn</i> messages, with different note pitches, to play a chord. However, you need to keep track of which notes are being played so that you can send the corresponding <i>NoteOff</i> message for each note, otherwise the notes will get stuck and play indefinitely.</p>
+			  <p align="justify">Let's look at an example. The score or musical notation plays at a speed of 60 beats per minute, so each quarter note is exactly 1 second long.</p>
+			  <p align="center">
+			    <img src="img/midi-chord.png" class="color-invertible mb-3"><br />
+				<audio controls>
+				  <source src="snd/midi-chord.ogg" type="audio/ogg">
+				  <source src="snd/midi-chord.mp3" type="audio/mpeg">
+				</audio>
+			  </p>
 			</div>
 			<div class="tab-pane fade" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
-			  <p>Instruments</p>
+			  <p align="justify">So far, we haven't told the synthesizer which sound to use to play the notes. The synthesizer would probably use a piano or a default instrument.</p>
+			  <p align="justify">However, there is a MIDI message called <i>ProgramChange</i> that specifies an instrument from a predefined list of 128 sounds. In theory, each synthesizer can have its own list of instruments, but the »<a href="https://en.wikipedia.org/wiki/General_MIDI" target="_blank">General MIDI</a>« standard (GM) specifies a list of 128 instruments to simplify compatibility. Most synthesizers include at least a GM compatibility mode.</p>
 			</div>
 			<div class="tab-pane fade" id="percussion" role="tabpanel" aria-labelledby="percussion-tab">
-			  <p>Percussion</p>
+			  <p align="justify">Percussion is a special case of instruments because it does not have a specific pitch, like a piano or trumpet. A special MIDI channel is used to play percussion. In the »<a href="https://en.wikipedia.org/wiki/General_MIDI" target="_blank">General MIDI</a>« standard, this is channel 10, but you can find synthesizers that can be programmed to accept percussion on any channel.</p>
+			  <p align="justify">In the case of a channel assigned to percussion (and also special sound effects that are often included in synthesizers), the portion of the <i>NoteOn</i> and <i>NoteOff</i> message that is dedicated to the pitch of the note is actually used to select which percussion instrument or other sound effect will be played.</p>
+			  <p align="justify">For example, let’s look at how you would send MIDI messages on channel 10 to play the drum background of the song »<a href="https://www.youtube.com/watch?v=129kuDCQtHs" target="_blank">Dancing in the Dark</a>« by Bruce Springsteen:</p>
+			  <p align="center">
+			    <img src="img/midi-drums.png" class="color-invertible mb-3"><br />
+				<audio controls>
+				  <source src="snd/midi-drums.ogg" type="audio/ogg">
+				  <source src="snd/midi-drums.mp3" type="audio/mpeg">
+				</audio>
+			  </p>
 			</div>
 			<div class="tab-pane fade" id="channels" role="tabpanel" aria-labelledby="channels-tab">
-			  <p>Channels</p>
+			  <p align="justify">The MIDI protocol can control up to 16 different MIDI channels. Each channel has its own state, such as the currently selected instrument, the notes currently playing, and other values ​​such as volume, panning, and more.</p>
+			  <p align="justify">By using different MIDI channels, we can specify a different instrument for each channel. By sending notes to the appropriate MIDI channels, those notes will be played by the appropriate instruments.</p>
+			  <p align="justify">Let's look at an example of a score with three instruments.</p>
+			  <p align="center">
+			    <img src="img/midi-instruments.png" class="color-invertible mb-3"><br />
+				<audio controls>
+				  <source src="snd/midi-instruments.ogg" type="audio/ogg">
+				  <source src="snd/midi-instruments.mp3" type="audio/mpeg">
+				</audio>
+			  </p>
 			</div>
 		  </div>
       </div>
@@ -1720,33 +1759,122 @@ file size = v<sub>b</sub> &middot; t = &nu; &middot; &fnof;<sub>&nu;</sub> &midd
 <hr class="mb-5" />
 
 
-<p align="justify"></p>
+<p align="justify">A video is essentially just a sequence of a certain number of images, called frames, that are played back in a certain time unit &ndash; usually we are talking about playing 24, 25, 30 or even 100 or more images or frames per second.</p>
 
-<p align="justify"></p>
 
-<p align="justify"></p>
+<h2>Video resolution and aspect ratio</h2>
 
-<p align="justify"></p>
+<p align="justify">So when we talk about the <b>resolution</b> and <b>aspect ratio</b> of a video, we are basically talking about the resolution and aspect ratio of the images or frames that the video is made up of. Depending on the area of ​​application of the video, there are different, <a href="https://en.wikipedia.org/wiki/Display_resolution_standards" target="_blank">standard video resolutions and aspect ratios</a>. When we talk about the areas of application of video, we are mainly thinking of the following areas: computer graphics (computer screens), analog and digital television and film (professional film recording).</p>
 
-<p align="justify"></p>
+<p align="justify">Most video and film productions use one of the three most widespread ratios:
+<ul align="justify">
+  <li><b>4:3</b> &ndash; standard television ratio used in the second half of the 20th century. Also called 12:9.</li>
+  <li><b>16:9</b> &ndash; the new standard for widescreen television, DVD and high-definition video.</li>
+  <li><b>21:9</b> &ndash; a very widescreen format used for showing movies in cinemas.</li>
+</ul>
+</p>
 
-<p align="justify"></p>
 
-<p align="justify"></p>
+<h2>Colour models for video</h2>
 
-<p align="justify"></p>
+<p align="justify">A video is basically just a sequence of images. To capture and display images, we usually use the RGB colour model, which we have already looked at in detail. We mentioned that the human eye is made up of two types of photoreceptors: »rods«, which detect light/dark and are more sensitive, and »cones«, which detect colour.</p>
 
-<p align="justify"></p>
+<p align="justify">In video, instead of the RGB color model, we use the YCbCr and YUV color models. The YUV color model is older and was mostly used in analog video, while the newer YCbCr color model is used in digital video. Both color models are designed so that the Y component represents the weighted sum of the RGB signals. The UV or CbCr components represent the weighted differences between the R and B signals and the Y signal.</p>
 
-<p align="justify"></p>
+<div class="alert alert-secondary">
+  <center>
+    <img src="img/Barns_grand_tetons.png" class="img-fluid mb-3">
+  </center>
+  <ul class="nav nav-underline mx-auto" id="image-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="ycbcr-tab" data-bs-toggle="tab" data-bs-target="#ycbcr" type="button" role="tab" aria-controls="ycbcr" aria-selected="true">YCbCr</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="yuv-tab" data-bs-toggle="tab" data-bs-target="#yuv" type="button" role="tab" aria-controls="yuv" aria-selected="false">YUV</button>
+    </li>
+  </ul>
 
-<p align="justify"></p>
+  <div class="tab-content mt-3" id="video-content">
+    <div class="tab-pane fade show active" id="ycbcr" role="tabpanel" aria-labelledby="ycbcr-tab">
+      <img src="img/Barns_grand_tetons_YCbCr.png" class="img-fluid mb-3">
+    </div>
+    <div class="tab-pane fade" id="yuv" role="tabpanel" aria-labelledby="yuv-tab">
+      <img src="img/Barns_grand_tetons_YUV.png" class="img-fluid mb-3">
+    </div>
+  </div>
+</div>
 
-<p align="justify"></p>
+<p>
+<div class="accordion" id="accordion12">
+  <div class="accordion-item bg-success-subtle text-success">
+    <h2 class="accordion-header">
+      <button class="accordion-button text-success-emphasis collapsed" style="background-color:var(--bs-success-border-subtle)" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+        <i class="fa fa-lightbulb"></i> &nbsp;<strong>Converting from RGB to YCbCr</strong>
+      </button>
+    </h2>
+    <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#accordion12">
+      <div class="accordion-body">
+	    <p align="justify">To convert from RGB to YCbCr, there are equations that can be used to calculate the brightness and chrominance values ​​for each RGB pixel.</p>
+	    <p>
+<pre class="mb-0">
+Y  =   0 + (0.2990 × R) + (0.5870 × G) + (0.1140 × B)
+Cb = 128 &minus; (0.1687 × R) &minus; (0.3313 × G) + (0.5000 × B)
+Cr = 128 + (0.5000 × R) &minus; (0.4187 × G) &minus; (0.0813 × B)
+</pre>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</p>
 
-<p align="justify"></p>
+<p align="justify">The weights are designed so that the UV and CbCr components are equal to zero or some constant value for all neutral colors (black, white, and all shades of gray for which R = G = B). This means that the brightness information is mostly carried on the Y component, while the color/chroma information is carried on the other two components (UV and CbCr).</p>
 
-<p align="justify"></p>
+<p align="justify">This is useful for video transmission and compression, as the color part of the video (UV or CbCr components) can be sampled less frequently than the Y component, which contains information about luminance, to which the human eye is more sensitive.</p>
+
+<p align="justify">The most common chroma subsampling ratios are 4:2:2, 4:2:0, and 4:1:1. In a 4:2:2 subsampling scheme, for example, the color information is sampled at half the horizontal resolution of the luminance information, while in a 4:2:0 scheme, the color information is also sampled at half the vertical resolution. In 4:1:1 scheme, the horizontal color resolution is quartered, and the bandwidth is halved compared to no chroma subsampling.</p>
+
+<p align="center"><img src="svg/chroma-subsampling-ratios.svg" class="img-fluid" style="width:35%" /></p>
+
+
+<h2>Video containers and formats</h2>
+
+<p align="justify">A video container is a file that is put together in a way that the operating system understands it (or knows what to do with it). Let's look at this with a real-life example:</p>
+
+<p align="center"><img src="img/video-container.png" class="img-fluid" /></p>
+
+<p align="justify">Random zeros and ones are called data. When this data is put together in a way that humans understand, it is called information. Similarly, a camera and a camera lens are made up of parts. A gift (photographic equipment) that you want to send to a friend is information.</p>
+
+<p align="justify">Sometimes we compress information to save space (packaging &ndash; like stuffing a suitcase). The organization and packaging of data is done by a set of rules called a codec (encode-decode). If a codec is designed to fit socks into every available space in a suitcase, then it does. For example, some codecs roll the socks, others fold them, and so on. In the above comparison, the encoding or codec is the way the items are packed in a box.</p>
+
+<p align="justify">What's written on the box is metadata &ndash; information about information. If the box is a gift, we put a label or tag on it. The friend who gets the gift can't know what's inside. He only knows what he's supposed to do with the gift.</p>
+
+<p align="justify">The outer box or postal package &ndash; a standard that makes it easy to process, send or read &ndash; is the container. When your friend receives the package, he'll know how to open it. That's how you get a video out of the container.</p>
+
+<p align="justify">But imagine getting a gift and just not being able to open it!</p>
+
+<p align="justify">Operating systems are designed to know what data is in the files and what to do with them. Operating systems are like delivery people in some ways. For example, an <code>.exe</code> file tells the operating system to execute (run) it, and a <code>.bat</code> file tells the operating system to run one or more sequential commands defined in it, one after the other.</p>
+
+<p align="justify">How does an operating system distinguish between an MP3 music file and a video file that contains no video but just the same music? By asking the file if it is an <code>.mp3</code> file or something else? If we specify the wrong file extension, the operating system will not know what to do with it. Similarly, a packet containing the wrong address is returned to the sender.</p>
+
+<p align="justify">A video container is a file designed to act as an interface (gatekeeper) between the operating system and the video data. It is like a customer service representative. When a customer requests help or support, the representative tells the customer, »I’m happy to help you, you don’t need to talk to the boss«. He or she deals directly with the operating system.</p>
+
+<p align="justify">Because files are closely related to operating systems, each operating system has a »favorite« file for each type of data. For Windows, the favorite video containers are WMV and AVI, while for Mac OSX, it is the MOV video container.</p>
+
+<p align="justify">A video container typically contains compressed video data (provided by a video codec), compressed audio data (provided by an audio codec), and timecodes, subtitles, title, and other metadata.</p>
+
+<p align="center"><img src="img/video-encoding-decoding.png" class="img-fluid" /></p>
+
+
+<h2>Differences between container and codec</h2>
+
+<p align="justify">A codec is a process of compressing (and expanding) video or audio data. It does not affect the video container, although they sometimes have similar names. For example, MPEG-4 is a compression process, and MP4 is a video container. The same goes for JPEG, an image compression process, and a container. They are two different things &ndash; like two people with the same name &ndash; which sometimes leads to different complications.</p>
+
+<p align="justify">Operating systems, however, have no problem with this. They know exactly how to handle each container. If they recognize a container, they use a program designed to deal with that container (file). MP3 files automatically open in your favorite music player, and so on.</p>
+
+<p align="justify">The first thing any program does when it opens a container is to check whether the content is organized as it should be. If you order online and receive a package that contains something else &ndash; you go crazy. Programs also act similarly, except they are designed to express their anger in a more »decent« way. Sometimes they simply stop.</p>
+
+<p align="justify">Once the program recognizes and validates the video container and its contents, it reads the metadata that is available and tries to determine which codec was used to compress the data, if any. If it finds a suitable codec, it continues to expand the video data and consequently also to play the video.</p>
 <!-- Content end -->
       </div>
 
